@@ -1,0 +1,779 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04205C4B1EC60666006AE5AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C4A1EC60666006AE5AE /* AppDelegate.m */; };
+		04205C511EC60666006AE5AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04205C4F1EC60666006AE5AE /* Main.storyboard */; };
+		04205C531EC60666006AE5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04205C521EC60666006AE5AE /* Assets.xcassets */; };
+		04205C561EC60666006AE5AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04205C541EC60666006AE5AE /* LaunchScreen.storyboard */; };
+		04205C7A1EC8C2D9006AE5AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C711EC8C2D9006AE5AE /* ViewController.m */; };
+		04205C821EC8C345006AE5AE /* ZNBTimeLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C811EC8C345006AE5AE /* ZNBTimeLineController.m */; };
+		04205C871EC907A3006AE5AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C861EC907A3006AE5AE /* main.m */; };
+		04205C891EC9089B006AE5AE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04205C881EC9089B006AE5AE /* Info.plist */; };
+		04205C8D1EC988BB006AE5AE /* ZNBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C8C1EC988BB006AE5AE /* ZNBNavigationController.m */; };
+		04205C971EC99F71006AE5AE /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C901EC99F71006AE5AE /* UIColor+Hex.m */; };
+		04205C981EC99F71006AE5AE /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C921EC99F71006AE5AE /* UIImage+Image.m */; };
+		04205C991EC99F71006AE5AE /* UIImage+Render.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C941EC99F71006AE5AE /* UIImage+Render.m */; };
+		04205C9A1EC99F71006AE5AE /* UIView+SFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C961EC99F71006AE5AE /* UIView+SFrame.m */; };
+		04205C9D1EC9AC21006AE5AE /* ZNBTimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C9C1EC9AC21006AE5AE /* ZNBTimeLineCell.m */; };
+		04205CA01EC9ADDA006AE5AE /* ZNBTimeLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C9F1EC9ADDA006AE5AE /* ZNBTimeLineModel.m */; };
+		04205CA31EC9AE71006AE5AE /* ZNBImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CA21EC9AE71006AE5AE /* ZNBImageModel.m */; };
+		04205CA61EC9AE8D006AE5AE /* ZNBTimeLineCmtModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CA51EC9AE8D006AE5AE /* ZNBTimeLineCmtModel.m */; };
+		04205CA91EC9E270006AE5AE /* ZNBTimeLineViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CA81EC9E270006AE5AE /* ZNBTimeLineViewModel.m */; };
+		04205CAD1EC9F972006AE5AE /* ZNBTimeLineTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CAC1EC9F972006AE5AE /* ZNBTimeLineTopView.m */; };
+		04205CAF1EC9F9AA006AE5AE /* ZNBTimeLineTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04205CAE1EC9F9AA006AE5AE /* ZNBTimeLineTopView.xib */; };
+		04205CB21ECA0B27006AE5AE /* ZNBTimeLineImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CB11ECA0B27006AE5AE /* ZNBTimeLineImageCell.m */; };
+		04205CB91ECADD17006AE5AE /* UITableView+HYBCacheHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CB61ECADD17006AE5AE /* UITableView+HYBCacheHeight.m */; };
+		04205CBA1ECADD17006AE5AE /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CB81ECADD17006AE5AE /* UITableViewCell+HYBMasonryAutoCellHeight.m */; };
+		04205CC61ECB07FA006AE5AE /* ZNBAddImageTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CC51ECB07FA006AE5AE /* ZNBAddImageTextController.m */; };
+		04205CCB1ECB084A006AE5AE /* ZNBAddImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CC91ECB084A006AE5AE /* ZNBAddImageTextCell.m */; };
+		04205CCC1ECB084A006AE5AE /* ZNBAddImageTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04205CCA1ECB084A006AE5AE /* ZNBAddImageTextCell.xib */; };
+		04205CD01ECB087E006AE5AE /* ZNBSetNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CCE1ECB087E006AE5AE /* ZNBSetNameController.m */; };
+		04205CD11ECB087E006AE5AE /* ZNBSetNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04205CCF1ECB087E006AE5AE /* ZNBSetNameController.xib */; };
+		04205CD51ECB0892006AE5AE /* ZNBSetAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CD31ECB0892006AE5AE /* ZNBSetAddressController.m */; };
+		04205CD61ECB0892006AE5AE /* ZNBSetAddressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04205CD41ECB0892006AE5AE /* ZNBSetAddressController.xib */; };
+		04205CDA1ECB1642006AE5AE /* ZNBSetTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CD81ECB1642006AE5AE /* ZNBSetTimeController.m */; };
+		04205CDB1ECB1642006AE5AE /* ZNBSetTimeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04205CD91ECB1642006AE5AE /* ZNBSetTimeController.xib */; };
+		04205CDF1ECB2A44006AE5AE /* ZNBAddImageTextEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CDD1ECB2A44006AE5AE /* ZNBAddImageTextEditCell.m */; };
+		04205CE01ECB2A44006AE5AE /* ZNBAddImageTextEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04205CDE1ECB2A44006AE5AE /* ZNBAddImageTextEditCell.xib */; };
+		04205CE31ECBF3FD006AE5AE /* ZNBRaiseCmtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CE21ECBF3FD006AE5AE /* ZNBRaiseCmtView.m */; };
+		04205CE51ECBF408006AE5AE /* ZNBRaiseCmtView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04205CE41ECBF408006AE5AE /* ZNBRaiseCmtView.xib */; };
+		04205CF51ECC60E0006AE5AE /* ZNBAddCmtController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CF31ECC60E0006AE5AE /* ZNBAddCmtController.m */; };
+		04205CF61ECC60E0006AE5AE /* ZNBAddCmtController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04205CF41ECC60E0006AE5AE /* ZNBAddCmtController.xib */; };
+		04205CFA1ECC60F0006AE5AE /* ZNBAddLikesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205CF81ECC60F0006AE5AE /* ZNBAddLikesController.m */; };
+		04205CFB1ECC60F0006AE5AE /* ZNBAddLikesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04205CF91ECC60F0006AE5AE /* ZNBAddLikesController.xib */; };
+		04205D041ECD638A006AE5AE /* ZNBLikesLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205D031ECD638A006AE5AE /* ZNBLikesLabel.m */; };
+		04205D071ECD71A5006AE5AE /* ZNBLikeBGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205D061ECD71A5006AE5AE /* ZNBLikeBGView.m */; };
+		04205D0A1ECD7C8A006AE5AE /* ZNBTimeLineCmtCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205D091ECD7C8A006AE5AE /* ZNBTimeLineCmtCell.m */; };
+		04205D0E1ECDA492006AE5AE /* ZNBAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205D0D1ECDA492006AE5AE /* ZNBAnimationManager.m */; };
+		04205D151ECDB2C9006AE5AE /* ZNBAddBGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205D131ECDB2C9006AE5AE /* ZNBAddBGViewController.m */; };
+		04205D161ECDB2C9006AE5AE /* ZNBAddBGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04205D141ECDB2C9006AE5AE /* ZNBAddBGViewController.xib */; };
+		04205D191ECDBB43006AE5AE /* ZNBTimeLineBGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205D181ECDBB43006AE5AE /* ZNBTimeLineBGModel.m */; };
+		CC266807CDB8FCB6F9F8E99A /* libPods-ZNBCos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7CB10A47565F222369FBF0 /* libPods-ZNBCos.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04205C431EC60666006AE5AE /* ZNBCos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZNBCos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04205C491EC60666006AE5AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04205C4A1EC60666006AE5AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04205C501EC60666006AE5AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04205C521EC60666006AE5AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04205C551EC60666006AE5AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04205C701EC8C2D9006AE5AE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04205C711EC8C2D9006AE5AE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04205C801EC8C345006AE5AE /* ZNBTimeLineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBTimeLineController.h; sourceTree = "<group>"; };
+		04205C811EC8C345006AE5AE /* ZNBTimeLineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBTimeLineController.m; sourceTree = "<group>"; };
+		04205C831EC8C3C1006AE5AE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		04205C861EC907A3006AE5AE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04205C881EC9089B006AE5AE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04205C8B1EC988BB006AE5AE /* ZNBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBNavigationController.h; sourceTree = "<group>"; };
+		04205C8C1EC988BB006AE5AE /* ZNBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBNavigationController.m; sourceTree = "<group>"; };
+		04205C8F1EC99F71006AE5AE /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		04205C901EC99F71006AE5AE /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		04205C911EC99F71006AE5AE /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		04205C921EC99F71006AE5AE /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		04205C931EC99F71006AE5AE /* UIImage+Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Render.h"; sourceTree = "<group>"; };
+		04205C941EC99F71006AE5AE /* UIImage+Render.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Render.m"; sourceTree = "<group>"; };
+		04205C951EC99F71006AE5AE /* UIView+SFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SFrame.h"; sourceTree = "<group>"; };
+		04205C961EC99F71006AE5AE /* UIView+SFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SFrame.m"; sourceTree = "<group>"; };
+		04205C9B1EC9AC21006AE5AE /* ZNBTimeLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBTimeLineCell.h; sourceTree = "<group>"; };
+		04205C9C1EC9AC21006AE5AE /* ZNBTimeLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBTimeLineCell.m; sourceTree = "<group>"; };
+		04205C9E1EC9ADDA006AE5AE /* ZNBTimeLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBTimeLineModel.h; sourceTree = "<group>"; };
+		04205C9F1EC9ADDA006AE5AE /* ZNBTimeLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBTimeLineModel.m; sourceTree = "<group>"; };
+		04205CA11EC9AE71006AE5AE /* ZNBImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBImageModel.h; sourceTree = "<group>"; };
+		04205CA21EC9AE71006AE5AE /* ZNBImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBImageModel.m; sourceTree = "<group>"; };
+		04205CA41EC9AE8D006AE5AE /* ZNBTimeLineCmtModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBTimeLineCmtModel.h; sourceTree = "<group>"; };
+		04205CA51EC9AE8D006AE5AE /* ZNBTimeLineCmtModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBTimeLineCmtModel.m; sourceTree = "<group>"; };
+		04205CA71EC9E270006AE5AE /* ZNBTimeLineViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBTimeLineViewModel.h; sourceTree = "<group>"; };
+		04205CA81EC9E270006AE5AE /* ZNBTimeLineViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBTimeLineViewModel.m; sourceTree = "<group>"; };
+		04205CAB1EC9F972006AE5AE /* ZNBTimeLineTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBTimeLineTopView.h; sourceTree = "<group>"; };
+		04205CAC1EC9F972006AE5AE /* ZNBTimeLineTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBTimeLineTopView.m; sourceTree = "<group>"; };
+		04205CAE1EC9F9AA006AE5AE /* ZNBTimeLineTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBTimeLineTopView.xib; sourceTree = "<group>"; };
+		04205CB01ECA0B27006AE5AE /* ZNBTimeLineImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBTimeLineImageCell.h; sourceTree = "<group>"; };
+		04205CB11ECA0B27006AE5AE /* ZNBTimeLineImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBTimeLineImageCell.m; sourceTree = "<group>"; };
+		04205CB51ECADD17006AE5AE /* UITableView+HYBCacheHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+HYBCacheHeight.h"; sourceTree = "<group>"; };
+		04205CB61ECADD17006AE5AE /* UITableView+HYBCacheHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HYBCacheHeight.m"; sourceTree = "<group>"; };
+		04205CB71ECADD17006AE5AE /* UITableViewCell+HYBMasonryAutoCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+HYBMasonryAutoCellHeight.h"; sourceTree = "<group>"; };
+		04205CB81ECADD17006AE5AE /* UITableViewCell+HYBMasonryAutoCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+HYBMasonryAutoCellHeight.m"; sourceTree = "<group>"; };
+		04205CC41ECB07FA006AE5AE /* ZNBAddImageTextController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBAddImageTextController.h; sourceTree = "<group>"; };
+		04205CC51ECB07FA006AE5AE /* ZNBAddImageTextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBAddImageTextController.m; sourceTree = "<group>"; };
+		04205CC81ECB084A006AE5AE /* ZNBAddImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBAddImageTextCell.h; sourceTree = "<group>"; };
+		04205CC91ECB084A006AE5AE /* ZNBAddImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBAddImageTextCell.m; sourceTree = "<group>"; };
+		04205CCA1ECB084A006AE5AE /* ZNBAddImageTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBAddImageTextCell.xib; sourceTree = "<group>"; };
+		04205CCD1ECB087E006AE5AE /* ZNBSetNameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBSetNameController.h; sourceTree = "<group>"; };
+		04205CCE1ECB087E006AE5AE /* ZNBSetNameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBSetNameController.m; sourceTree = "<group>"; };
+		04205CCF1ECB087E006AE5AE /* ZNBSetNameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBSetNameController.xib; sourceTree = "<group>"; };
+		04205CD21ECB0892006AE5AE /* ZNBSetAddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBSetAddressController.h; sourceTree = "<group>"; };
+		04205CD31ECB0892006AE5AE /* ZNBSetAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBSetAddressController.m; sourceTree = "<group>"; };
+		04205CD41ECB0892006AE5AE /* ZNBSetAddressController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBSetAddressController.xib; sourceTree = "<group>"; };
+		04205CD71ECB1642006AE5AE /* ZNBSetTimeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBSetTimeController.h; sourceTree = "<group>"; };
+		04205CD81ECB1642006AE5AE /* ZNBSetTimeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBSetTimeController.m; sourceTree = "<group>"; };
+		04205CD91ECB1642006AE5AE /* ZNBSetTimeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBSetTimeController.xib; sourceTree = "<group>"; };
+		04205CDC1ECB2A44006AE5AE /* ZNBAddImageTextEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBAddImageTextEditCell.h; sourceTree = "<group>"; };
+		04205CDD1ECB2A44006AE5AE /* ZNBAddImageTextEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBAddImageTextEditCell.m; sourceTree = "<group>"; };
+		04205CDE1ECB2A44006AE5AE /* ZNBAddImageTextEditCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBAddImageTextEditCell.xib; sourceTree = "<group>"; };
+		04205CE11ECBF3FD006AE5AE /* ZNBRaiseCmtView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBRaiseCmtView.h; sourceTree = "<group>"; };
+		04205CE21ECBF3FD006AE5AE /* ZNBRaiseCmtView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBRaiseCmtView.m; sourceTree = "<group>"; };
+		04205CE41ECBF408006AE5AE /* ZNBRaiseCmtView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBRaiseCmtView.xib; sourceTree = "<group>"; };
+		04205CF21ECC60E0006AE5AE /* ZNBAddCmtController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBAddCmtController.h; sourceTree = "<group>"; };
+		04205CF31ECC60E0006AE5AE /* ZNBAddCmtController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBAddCmtController.m; sourceTree = "<group>"; };
+		04205CF41ECC60E0006AE5AE /* ZNBAddCmtController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBAddCmtController.xib; sourceTree = "<group>"; };
+		04205CF71ECC60F0006AE5AE /* ZNBAddLikesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBAddLikesController.h; sourceTree = "<group>"; };
+		04205CF81ECC60F0006AE5AE /* ZNBAddLikesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBAddLikesController.m; sourceTree = "<group>"; };
+		04205CF91ECC60F0006AE5AE /* ZNBAddLikesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBAddLikesController.xib; sourceTree = "<group>"; };
+		04205D021ECD638A006AE5AE /* ZNBLikesLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBLikesLabel.h; sourceTree = "<group>"; };
+		04205D031ECD638A006AE5AE /* ZNBLikesLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBLikesLabel.m; sourceTree = "<group>"; };
+		04205D051ECD71A5006AE5AE /* ZNBLikeBGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBLikeBGView.h; sourceTree = "<group>"; };
+		04205D061ECD71A5006AE5AE /* ZNBLikeBGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBLikeBGView.m; sourceTree = "<group>"; };
+		04205D081ECD7C8A006AE5AE /* ZNBTimeLineCmtCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBTimeLineCmtCell.h; sourceTree = "<group>"; };
+		04205D091ECD7C8A006AE5AE /* ZNBTimeLineCmtCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBTimeLineCmtCell.m; sourceTree = "<group>"; };
+		04205D0C1ECDA492006AE5AE /* ZNBAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBAnimationManager.h; sourceTree = "<group>"; };
+		04205D0D1ECDA492006AE5AE /* ZNBAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBAnimationManager.m; sourceTree = "<group>"; };
+		04205D121ECDB2C9006AE5AE /* ZNBAddBGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBAddBGViewController.h; sourceTree = "<group>"; };
+		04205D131ECDB2C9006AE5AE /* ZNBAddBGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBAddBGViewController.m; sourceTree = "<group>"; };
+		04205D141ECDB2C9006AE5AE /* ZNBAddBGViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBAddBGViewController.xib; sourceTree = "<group>"; };
+		04205D171ECDBB43006AE5AE /* ZNBTimeLineBGModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBTimeLineBGModel.h; sourceTree = "<group>"; };
+		04205D181ECDBB43006AE5AE /* ZNBTimeLineBGModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBTimeLineBGModel.m; sourceTree = "<group>"; };
+		0E7CB10A47565F222369FBF0 /* libPods-ZNBCos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZNBCos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D63A6752E32CA532764D2D /* Pods-ZNBCos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZNBCos.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZNBCos/Pods-ZNBCos.release.xcconfig"; sourceTree = "<group>"; };
+		FE2D7BEBAFB5EC94DFBA82B0 /* Pods-ZNBCos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZNBCos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZNBCos/Pods-ZNBCos.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04205C401EC60666006AE5AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC266807CDB8FCB6F9F8E99A /* libPods-ZNBCos.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04205C3A1EC60666006AE5AE = {
+			isa = PBXGroup;
+			children = (
+				04205C451EC60666006AE5AE /* ZNBCos */,
+				04205C441EC60666006AE5AE /* Products */,
+				E4E500F4D1B976B13B806EB5 /* Pods */,
+				76CA71441ACA5F1C4EB199C0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04205C441EC60666006AE5AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04205C431EC60666006AE5AE /* ZNBCos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04205C451EC60666006AE5AE /* ZNBCos */ = {
+			isa = PBXGroup;
+			children = (
+				04205C6D1EC8C2D9006AE5AE /* Class */,
+				04205C491EC60666006AE5AE /* AppDelegate.h */,
+				04205C4A1EC60666006AE5AE /* AppDelegate.m */,
+				04205C4F1EC60666006AE5AE /* Main.storyboard */,
+				04205C521EC60666006AE5AE /* Assets.xcassets */,
+				04205C541EC60666006AE5AE /* LaunchScreen.storyboard */,
+				04205C7B1EC8C2EC006AE5AE /* Other */,
+				04205C461EC60666006AE5AE /* Supporting Files */,
+			);
+			path = ZNBCos;
+			sourceTree = "<group>";
+		};
+		04205C461EC60666006AE5AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04205C881EC9089B006AE5AE /* Info.plist */,
+				04205C861EC907A3006AE5AE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04205C6D1EC8C2D9006AE5AE /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				04205C8A1EC98823006AE5AE /* BaseViewController */,
+				04205C6E1EC8C2D9006AE5AE /* 主页 */,
+				04205C751EC8C2D9006AE5AE /* 朋友圈 */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		04205C6E1EC8C2D9006AE5AE /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				04205C6F1EC8C2D9006AE5AE /* Controller */,
+				04205C721EC8C2D9006AE5AE /* Model */,
+				04205C731EC8C2D9006AE5AE /* View */,
+				04205C741EC8C2D9006AE5AE /* ViewModel */,
+			);
+			path = "主页";
+			sourceTree = "<group>";
+		};
+		04205C6F1EC8C2D9006AE5AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04205C701EC8C2D9006AE5AE /* ViewController.h */,
+				04205C711EC8C2D9006AE5AE /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04205C721EC8C2D9006AE5AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04205C731EC8C2D9006AE5AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04205C741EC8C2D9006AE5AE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04205C751EC8C2D9006AE5AE /* 朋友圈 */ = {
+			isa = PBXGroup;
+			children = (
+				04205C761EC8C2D9006AE5AE /* Controller */,
+				04205C771EC8C2D9006AE5AE /* Model */,
+				04205C781EC8C2D9006AE5AE /* View */,
+				04205C791EC8C2D9006AE5AE /* ViewModel */,
+			);
+			path = "朋友圈";
+			sourceTree = "<group>";
+		};
+		04205C761EC8C2D9006AE5AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04205CC31ECB07FA006AE5AE /* 朋友圈子控制器 */,
+				04205C801EC8C345006AE5AE /* ZNBTimeLineController.h */,
+				04205C811EC8C345006AE5AE /* ZNBTimeLineController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04205C771EC8C2D9006AE5AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04205C9E1EC9ADDA006AE5AE /* ZNBTimeLineModel.h */,
+				04205C9F1EC9ADDA006AE5AE /* ZNBTimeLineModel.m */,
+				04205CA11EC9AE71006AE5AE /* ZNBImageModel.h */,
+				04205CA21EC9AE71006AE5AE /* ZNBImageModel.m */,
+				04205CA41EC9AE8D006AE5AE /* ZNBTimeLineCmtModel.h */,
+				04205CA51EC9AE8D006AE5AE /* ZNBTimeLineCmtModel.m */,
+				04205D171ECDBB43006AE5AE /* ZNBTimeLineBGModel.h */,
+				04205D181ECDBB43006AE5AE /* ZNBTimeLineBGModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04205C781EC8C2D9006AE5AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04205CC71ECB084A006AE5AE /* 子视图 */,
+				04205C9B1EC9AC21006AE5AE /* ZNBTimeLineCell.h */,
+				04205C9C1EC9AC21006AE5AE /* ZNBTimeLineCell.m */,
+				04205CAB1EC9F972006AE5AE /* ZNBTimeLineTopView.h */,
+				04205CAC1EC9F972006AE5AE /* ZNBTimeLineTopView.m */,
+				04205CAE1EC9F9AA006AE5AE /* ZNBTimeLineTopView.xib */,
+				04205CB01ECA0B27006AE5AE /* ZNBTimeLineImageCell.h */,
+				04205CB11ECA0B27006AE5AE /* ZNBTimeLineImageCell.m */,
+				04205CE11ECBF3FD006AE5AE /* ZNBRaiseCmtView.h */,
+				04205CE21ECBF3FD006AE5AE /* ZNBRaiseCmtView.m */,
+				04205CE41ECBF408006AE5AE /* ZNBRaiseCmtView.xib */,
+				04205D081ECD7C8A006AE5AE /* ZNBTimeLineCmtCell.h */,
+				04205D091ECD7C8A006AE5AE /* ZNBTimeLineCmtCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04205C791EC8C2D9006AE5AE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04205CA71EC9E270006AE5AE /* ZNBTimeLineViewModel.h */,
+				04205CA81EC9E270006AE5AE /* ZNBTimeLineViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04205C7B1EC8C2EC006AE5AE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				04205D0B1ECDA479006AE5AE /* Tool */,
+				04205CB31ECADD17006AE5AE /* ThirdPart */,
+				04205C8E1EC99F71006AE5AE /* Catory */,
+				04205C831EC8C3C1006AE5AE /* PrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		04205C8A1EC98823006AE5AE /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04205C8B1EC988BB006AE5AE /* ZNBNavigationController.h */,
+				04205C8C1EC988BB006AE5AE /* ZNBNavigationController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		04205C8E1EC99F71006AE5AE /* Catory */ = {
+			isa = PBXGroup;
+			children = (
+				04205C8F1EC99F71006AE5AE /* UIColor+Hex.h */,
+				04205C901EC99F71006AE5AE /* UIColor+Hex.m */,
+				04205C911EC99F71006AE5AE /* UIImage+Image.h */,
+				04205C921EC99F71006AE5AE /* UIImage+Image.m */,
+				04205C931EC99F71006AE5AE /* UIImage+Render.h */,
+				04205C941EC99F71006AE5AE /* UIImage+Render.m */,
+				04205C951EC99F71006AE5AE /* UIView+SFrame.h */,
+				04205C961EC99F71006AE5AE /* UIView+SFrame.m */,
+			);
+			path = Catory;
+			sourceTree = "<group>";
+		};
+		04205CB31ECADD17006AE5AE /* ThirdPart */ = {
+			isa = PBXGroup;
+			children = (
+				04205CB41ECADD17006AE5AE /* HYBMasonryAutoCellHeight */,
+			);
+			path = ThirdPart;
+			sourceTree = "<group>";
+		};
+		04205CB41ECADD17006AE5AE /* HYBMasonryAutoCellHeight */ = {
+			isa = PBXGroup;
+			children = (
+				04205CB51ECADD17006AE5AE /* UITableView+HYBCacheHeight.h */,
+				04205CB61ECADD17006AE5AE /* UITableView+HYBCacheHeight.m */,
+				04205CB71ECADD17006AE5AE /* UITableViewCell+HYBMasonryAutoCellHeight.h */,
+				04205CB81ECADD17006AE5AE /* UITableViewCell+HYBMasonryAutoCellHeight.m */,
+			);
+			path = HYBMasonryAutoCellHeight;
+			sourceTree = "<group>";
+		};
+		04205CC31ECB07FA006AE5AE /* 朋友圈子控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				04205CF71ECC60F0006AE5AE /* ZNBAddLikesController.h */,
+				04205CF81ECC60F0006AE5AE /* ZNBAddLikesController.m */,
+				04205CF91ECC60F0006AE5AE /* ZNBAddLikesController.xib */,
+				04205CF21ECC60E0006AE5AE /* ZNBAddCmtController.h */,
+				04205CF31ECC60E0006AE5AE /* ZNBAddCmtController.m */,
+				04205CF41ECC60E0006AE5AE /* ZNBAddCmtController.xib */,
+				04205CC41ECB07FA006AE5AE /* ZNBAddImageTextController.h */,
+				04205CC51ECB07FA006AE5AE /* ZNBAddImageTextController.m */,
+				04205CCD1ECB087E006AE5AE /* ZNBSetNameController.h */,
+				04205CCE1ECB087E006AE5AE /* ZNBSetNameController.m */,
+				04205CCF1ECB087E006AE5AE /* ZNBSetNameController.xib */,
+				04205CD21ECB0892006AE5AE /* ZNBSetAddressController.h */,
+				04205CD31ECB0892006AE5AE /* ZNBSetAddressController.m */,
+				04205CD41ECB0892006AE5AE /* ZNBSetAddressController.xib */,
+				04205CD71ECB1642006AE5AE /* ZNBSetTimeController.h */,
+				04205CD81ECB1642006AE5AE /* ZNBSetTimeController.m */,
+				04205CD91ECB1642006AE5AE /* ZNBSetTimeController.xib */,
+				04205D121ECDB2C9006AE5AE /* ZNBAddBGViewController.h */,
+				04205D131ECDB2C9006AE5AE /* ZNBAddBGViewController.m */,
+				04205D141ECDB2C9006AE5AE /* ZNBAddBGViewController.xib */,
+			);
+			path = "朋友圈子控制器";
+			sourceTree = "<group>";
+		};
+		04205CC71ECB084A006AE5AE /* 子视图 */ = {
+			isa = PBXGroup;
+			children = (
+				04205CC81ECB084A006AE5AE /* ZNBAddImageTextCell.h */,
+				04205CC91ECB084A006AE5AE /* ZNBAddImageTextCell.m */,
+				04205CCA1ECB084A006AE5AE /* ZNBAddImageTextCell.xib */,
+				04205CDC1ECB2A44006AE5AE /* ZNBAddImageTextEditCell.h */,
+				04205CDD1ECB2A44006AE5AE /* ZNBAddImageTextEditCell.m */,
+				04205CDE1ECB2A44006AE5AE /* ZNBAddImageTextEditCell.xib */,
+				04205D021ECD638A006AE5AE /* ZNBLikesLabel.h */,
+				04205D031ECD638A006AE5AE /* ZNBLikesLabel.m */,
+				04205D051ECD71A5006AE5AE /* ZNBLikeBGView.h */,
+				04205D061ECD71A5006AE5AE /* ZNBLikeBGView.m */,
+			);
+			path = "子视图";
+			sourceTree = "<group>";
+		};
+		04205D0B1ECDA479006AE5AE /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				04205D0C1ECDA492006AE5AE /* ZNBAnimationManager.h */,
+				04205D0D1ECDA492006AE5AE /* ZNBAnimationManager.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		76CA71441ACA5F1C4EB199C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E7CB10A47565F222369FBF0 /* libPods-ZNBCos.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4E500F4D1B976B13B806EB5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE2D7BEBAFB5EC94DFBA82B0 /* Pods-ZNBCos.debug.xcconfig */,
+				A0D63A6752E32CA532764D2D /* Pods-ZNBCos.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04205C421EC60666006AE5AE /* ZNBCos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04205C5A1EC60666006AE5AE /* Build configuration list for PBXNativeTarget "ZNBCos" */;
+			buildPhases = (
+				A654AFCB30D393DF1986236C /* [CP] Check Pods Manifest.lock */,
+				04205C3F1EC60666006AE5AE /* Sources */,
+				04205C401EC60666006AE5AE /* Frameworks */,
+				04205C411EC60666006AE5AE /* Resources */,
+				D57A379D861F04D0CE28D594 /* [CP] Embed Pods Frameworks */,
+				B2B31798D948974C4D5467E3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZNBCos;
+			productName = ZNBCos;
+			productReference = 04205C431EC60666006AE5AE /* ZNBCos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04205C3B1EC60666006AE5AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = CoderZNBmm;
+				TargetAttributes = {
+					04205C421EC60666006AE5AE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = B3R5RSW6TE;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 04205C3E1EC60666006AE5AE /* Build configuration list for PBXProject "ZNBCos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04205C3A1EC60666006AE5AE;
+			productRefGroup = 04205C441EC60666006AE5AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04205C421EC60666006AE5AE /* ZNBCos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04205C411EC60666006AE5AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04205D161ECDB2C9006AE5AE /* ZNBAddBGViewController.xib in Resources */,
+				04205CE51ECBF408006AE5AE /* ZNBRaiseCmtView.xib in Resources */,
+				04205C891EC9089B006AE5AE /* Info.plist in Resources */,
+				04205CFB1ECC60F0006AE5AE /* ZNBAddLikesController.xib in Resources */,
+				04205CDB1ECB1642006AE5AE /* ZNBSetTimeController.xib in Resources */,
+				04205CCC1ECB084A006AE5AE /* ZNBAddImageTextCell.xib in Resources */,
+				04205CAF1EC9F9AA006AE5AE /* ZNBTimeLineTopView.xib in Resources */,
+				04205C561EC60666006AE5AE /* LaunchScreen.storyboard in Resources */,
+				04205CD61ECB0892006AE5AE /* ZNBSetAddressController.xib in Resources */,
+				04205C531EC60666006AE5AE /* Assets.xcassets in Resources */,
+				04205CE01ECB2A44006AE5AE /* ZNBAddImageTextEditCell.xib in Resources */,
+				04205C511EC60666006AE5AE /* Main.storyboard in Resources */,
+				04205CD11ECB087E006AE5AE /* ZNBSetNameController.xib in Resources */,
+				04205CF61ECC60E0006AE5AE /* ZNBAddCmtController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A654AFCB30D393DF1986236C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B2B31798D948974C4D5467E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZNBCos/Pods-ZNBCos-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D57A379D861F04D0CE28D594 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZNBCos/Pods-ZNBCos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04205C3F1EC60666006AE5AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04205CFA1ECC60F0006AE5AE /* ZNBAddLikesController.m in Sources */,
+				04205CA31EC9AE71006AE5AE /* ZNBImageModel.m in Sources */,
+				04205CB91ECADD17006AE5AE /* UITableView+HYBCacheHeight.m in Sources */,
+				04205C7A1EC8C2D9006AE5AE /* ViewController.m in Sources */,
+				04205D041ECD638A006AE5AE /* ZNBLikesLabel.m in Sources */,
+				04205C971EC99F71006AE5AE /* UIColor+Hex.m in Sources */,
+				04205CA61EC9AE8D006AE5AE /* ZNBTimeLineCmtModel.m in Sources */,
+				04205C821EC8C345006AE5AE /* ZNBTimeLineController.m in Sources */,
+				04205CB21ECA0B27006AE5AE /* ZNBTimeLineImageCell.m in Sources */,
+				04205CF51ECC60E0006AE5AE /* ZNBAddCmtController.m in Sources */,
+				04205CCB1ECB084A006AE5AE /* ZNBAddImageTextCell.m in Sources */,
+				04205C9D1EC9AC21006AE5AE /* ZNBTimeLineCell.m in Sources */,
+				04205C871EC907A3006AE5AE /* main.m in Sources */,
+				04205C981EC99F71006AE5AE /* UIImage+Image.m in Sources */,
+				04205D151ECDB2C9006AE5AE /* ZNBAddBGViewController.m in Sources */,
+				04205CD01ECB087E006AE5AE /* ZNBSetNameController.m in Sources */,
+				04205CD51ECB0892006AE5AE /* ZNBSetAddressController.m in Sources */,
+				04205CDF1ECB2A44006AE5AE /* ZNBAddImageTextEditCell.m in Sources */,
+				04205CA91EC9E270006AE5AE /* ZNBTimeLineViewModel.m in Sources */,
+				04205D071ECD71A5006AE5AE /* ZNBLikeBGView.m in Sources */,
+				04205D0E1ECDA492006AE5AE /* ZNBAnimationManager.m in Sources */,
+				04205C9A1EC99F71006AE5AE /* UIView+SFrame.m in Sources */,
+				04205CDA1ECB1642006AE5AE /* ZNBSetTimeController.m in Sources */,
+				04205CA01EC9ADDA006AE5AE /* ZNBTimeLineModel.m in Sources */,
+				04205C8D1EC988BB006AE5AE /* ZNBNavigationController.m in Sources */,
+				04205CAD1EC9F972006AE5AE /* ZNBTimeLineTopView.m in Sources */,
+				04205D0A1ECD7C8A006AE5AE /* ZNBTimeLineCmtCell.m in Sources */,
+				04205CE31ECBF3FD006AE5AE /* ZNBRaiseCmtView.m in Sources */,
+				04205CBA1ECADD17006AE5AE /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */,
+				04205CC61ECB07FA006AE5AE /* ZNBAddImageTextController.m in Sources */,
+				04205C4B1EC60666006AE5AE /* AppDelegate.m in Sources */,
+				04205D191ECDBB43006AE5AE /* ZNBTimeLineBGModel.m in Sources */,
+				04205C991EC99F71006AE5AE /* UIImage+Render.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04205C4F1EC60666006AE5AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04205C501EC60666006AE5AE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04205C541EC60666006AE5AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04205C551EC60666006AE5AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04205C581EC60666006AE5AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		04205C591EC60666006AE5AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04205C5B1EC60666006AE5AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE2D7BEBAFB5EC94DFBA82B0 /* Pods-ZNBCos.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = B3R5RSW6TE;
+				GCC_PREFIX_HEADER = ZNBCos/Other/PrefixHeader.pch;
+				INFOPLIST_FILE = ZNBCos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.znb.detail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		04205C5C1EC60666006AE5AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0D63A6752E32CA532764D2D /* Pods-ZNBCos.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = B3R5RSW6TE;
+				GCC_PREFIX_HEADER = ZNBCos/Other/PrefixHeader.pch;
+				INFOPLIST_FILE = ZNBCos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.znb.detail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04205C3E1EC60666006AE5AE /* Build configuration list for PBXProject "ZNBCos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04205C581EC60666006AE5AE /* Debug */,
+				04205C591EC60666006AE5AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04205C5A1EC60666006AE5AE /* Build configuration list for PBXNativeTarget "ZNBCos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04205C5B1EC60666006AE5AE /* Debug */,
+				04205C5C1EC60666006AE5AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04205C3B1EC60666006AE5AE /* Project object */;
+}

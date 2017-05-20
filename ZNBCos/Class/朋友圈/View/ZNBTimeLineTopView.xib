@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="zct-9a-MBc" customClass="ZNBTimeLineTopView">
+            <rect key="frame" x="0.0" y="0.0" width="318" height="163"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timg-3" translatesAutoresizingMaskIntoConstraints="NO" id="nTE-v6-HNZ">
+                    <rect key="frame" x="0.0" y="0.0" width="318" height="138"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hi5-Yo-0eF">
+                    <rect key="frame" x="236" y="91" width="72" height="72"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="znb 2" translatesAutoresizingMaskIntoConstraints="NO" id="Ckr-MP-DWw">
+                            <rect key="frame" x="2" y="2" width="68" height="68"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Ckr-MP-DWw" firstAttribute="top" secondItem="hi5-Yo-0eF" secondAttribute="top" constant="2.5" id="1vQ-Aj-fhz"/>
+                        <constraint firstItem="Ckr-MP-DWw" firstAttribute="leading" secondItem="hi5-Yo-0eF" secondAttribute="leading" constant="2.5" id="4hN-O0-e9m"/>
+                        <constraint firstAttribute="width" secondItem="hi5-Yo-0eF" secondAttribute="height" multiplier="1:1" id="Sem-pf-ZAf"/>
+                        <constraint firstAttribute="trailing" secondItem="Ckr-MP-DWw" secondAttribute="trailing" constant="2.5" id="ZzG-A0-JVG"/>
+                        <constraint firstAttribute="height" constant="72" id="pZV-3Q-hah"/>
+                        <constraint firstAttribute="bottom" secondItem="Ckr-MP-DWw" secondAttribute="bottom" constant="2.5" id="rM3-Yy-W99"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="夏天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHl-V4-ck2">
+                    <rect key="frame" x="182" y="108" width="34" height="20"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="hi5-Yo-0eF" secondAttribute="trailing" constant="10" id="2Gb-Cl-zF3"/>
+                <constraint firstAttribute="bottom" secondItem="nTE-v6-HNZ" secondAttribute="bottom" constant="25" id="D5m-Wt-zhz"/>
+                <constraint firstItem="nTE-v6-HNZ" firstAttribute="top" secondItem="zct-9a-MBc" secondAttribute="top" id="HBm-Qp-UAY"/>
+                <constraint firstItem="DHl-V4-ck2" firstAttribute="bottom" secondItem="nTE-v6-HNZ" secondAttribute="bottom" constant="-10" id="Hnv-Tc-YHD"/>
+                <constraint firstItem="hi5-Yo-0eF" firstAttribute="leading" secondItem="DHl-V4-ck2" secondAttribute="trailing" constant="20" id="KtO-Qz-cE4"/>
+                <constraint firstAttribute="bottom" secondItem="hi5-Yo-0eF" secondAttribute="bottom" id="MiE-3l-9Mi"/>
+                <constraint firstAttribute="trailing" secondItem="nTE-v6-HNZ" secondAttribute="trailing" id="a4D-V7-EI9"/>
+                <constraint firstItem="nTE-v6-HNZ" firstAttribute="leading" secondItem="zct-9a-MBc" secondAttribute="leading" id="tcn-xx-vkP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="avatar" destination="Ckr-MP-DWw" id="KuM-af-Bch"/>
+                <outlet property="avatarContent" destination="hi5-Yo-0eF" id="CJ4-9O-hZy"/>
+                <outlet property="avatarWidth" destination="pZV-3Q-hah" id="pfX-ik-0Il"/>
+                <outlet property="bgImageView" destination="nTE-v6-HNZ" id="ifW-Py-gVF"/>
+                <outlet property="nameLabel" destination="DHl-V4-ck2" id="hzX-qa-FHd"/>
+            </connections>
+            <point key="canvasLocation" x="-85" y="-118.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="timg-3" width="600" height="450"/>
+        <image name="znb 2" width="904" height="903"/>
+    </resources>
+</document>
