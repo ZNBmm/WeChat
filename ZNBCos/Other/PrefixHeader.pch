@@ -34,4 +34,5 @@
 #import <TZImagePickerController.h>
 #import "UITableViewCell+HYBMasonryAutoCellHeight.h"
 #import "ZNBAnimationManager.h"
+#import <YYText.h>
 #endif /* PrefixHeader_pch */

@@ -16,11 +16,14 @@
 
 + (void)load {
     UINavigationBar *bar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[self]];
+    
     NSMutableDictionary *attr = [NSMutableDictionary dictionary];
     attr[NSFontAttributeName] = [UIFont fontWithName:@"AlNile-Bold" size:20];
     attr[NSForegroundColorAttributeName] = [UIColor whiteColor];
     bar.titleTextAttributes = attr;
     bar.tintColor = [UIColor whiteColor];
+    bar.translucent = NO;
+    
     CGFloat rgb = 0.1;
     bar.barTintColor = [UIColor colorWithRed:rgb green:rgb blue:rgb alpha:0.9];
     [bar setBackgroundImage:[UIImage imageNamed:@"moments_navigationbar"] forBarMetrics:UIBarMetricsDefault];;

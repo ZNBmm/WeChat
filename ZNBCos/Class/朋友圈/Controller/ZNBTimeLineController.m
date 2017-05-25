@@ -67,6 +67,7 @@ static NSString *const reuseCell = @"ZNBTimeLineCell";
 
     [super viewWillAppear:animated];
     [self detalData];
+    
 }
 #pragma mark - 初始化UI操作
 - (void)setUpNav {

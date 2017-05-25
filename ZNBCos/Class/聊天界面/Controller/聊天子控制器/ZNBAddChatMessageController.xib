@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZNBAddChatMessageController">
+            <connections>
+                <outlet property="indicateLabel" destination="OUR-6G-W1m" id="gDQ-uT-SkW"/>
+                <outlet property="switchBtn" destination="zLR-pQ-zuj" id="JsG-By-6t4"/>
+                <outlet property="textView" destination="wzL-tb-4Eg" id="q7m-xV-Zm9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zLR-pQ-zuj">
+                    <rect key="frame" x="316" y="142" width="51" height="31"/>
+                    <connections>
+                        <action selector="switchClick:" destination="-1" eventType="valueChanged" id="wdE-y0-vIf"/>
+                    </connections>
+                </switch>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wzL-tb-4Eg">
+                    <rect key="frame" x="10" y="20" width="355" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="l4T-vz-a9i"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4T-ri-GeG">
+                    <rect key="frame" x="10" y="140" width="156.5" height="33.5"/>
+                    <string key="text">消息类型
+(打开为自己,关闭为对方)</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUR-6G-W1m">
+                    <rect key="frame" x="10" y="183.5" width="14.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="wzL-tb-4Eg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="ALc-9k-I34"/>
+                <constraint firstItem="zLR-pQ-zuj" firstAttribute="centerY" secondItem="t4T-ri-GeG" secondAttribute="centerY" id="IIH-rR-rCo"/>
+                <constraint firstItem="OUR-6G-W1m" firstAttribute="top" secondItem="t4T-ri-GeG" secondAttribute="bottom" constant="10" id="W5s-b9-1B2"/>
+                <constraint firstItem="t4T-ri-GeG" firstAttribute="top" secondItem="wzL-tb-4Eg" secondAttribute="bottom" constant="20" id="XLt-77-1Fm"/>
+                <constraint firstItem="wzL-tb-4Eg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="eee-TN-D1R"/>
+                <constraint firstAttribute="trailing" secondItem="zLR-pQ-zuj" secondAttribute="trailing" constant="10" id="oYR-qZ-D6e"/>
+                <constraint firstAttribute="trailing" secondItem="wzL-tb-4Eg" secondAttribute="trailing" constant="10" id="uq2-7C-1ua"/>
+                <constraint firstItem="t4T-ri-GeG" firstAttribute="leading" secondItem="wzL-tb-4Eg" secondAttribute="leading" id="wq7-eY-pWw"/>
+                <constraint firstItem="OUR-6G-W1m" firstAttribute="leading" secondItem="t4T-ri-GeG" secondAttribute="leading" id="xg9-Cs-QZr"/>
+            </constraints>
+            <point key="canvasLocation" x="6.5" y="47.5"/>
+        </view>
+    </objects>
+</document>

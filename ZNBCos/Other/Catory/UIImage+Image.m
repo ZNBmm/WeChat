@@ -215,7 +215,7 @@
     UIImage *loginImage = [UIImage imageNamed:imageName];
     CGFloat topEdge = loginImage.size.height * 0.5;
     CGFloat leftEdge = loginImage.size.width * 0.5;
-    return [loginImage resizableImageWithCapInsets:UIEdgeInsetsMake(topEdge, leftEdge, topEdge, leftEdge)];
+    return [loginImage resizableImageWithCapInsets:UIEdgeInsetsMake(topEdge, leftEdge, topEdge, leftEdge) resizingMode:UIImageResizingModeStretch];
 }
 
 // 根据指定比例缩放图片

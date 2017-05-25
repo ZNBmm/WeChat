@@ -54,6 +54,20 @@
 		04205D151ECDB2C9006AE5AE /* ZNBAddBGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205D131ECDB2C9006AE5AE /* ZNBAddBGViewController.m */; };
 		04205D161ECDB2C9006AE5AE /* ZNBAddBGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04205D141ECDB2C9006AE5AE /* ZNBAddBGViewController.xib */; };
 		04205D191ECDBB43006AE5AE /* ZNBTimeLineBGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205D181ECDBB43006AE5AE /* ZNBTimeLineBGModel.m */; };
+		046CDA021ED67701002A8022 /* ZNBChatMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA011ED67700002A8022 /* ZNBChatMessageCell.m */; };
+		046CDA051ED67809002A8022 /* ZNBChatMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA041ED67809002A8022 /* ZNBChatMessageModel.m */; };
+		046CDA081ED67D91002A8022 /* ZNBChatMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA071ED67D91002A8022 /* ZNBChatMessageViewModel.m */; };
+		046CDA0D1ED69427002A8022 /* ZNBAddChatMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA0B1ED69427002A8022 /* ZNBAddChatMessageController.m */; };
+		046CDA0E1ED69427002A8022 /* ZNBAddChatMessageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046CDA0C1ED69427002A8022 /* ZNBAddChatMessageController.xib */; };
+		046CDA111ED6B019002A8022 /* ZNBChatConversationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA101ED6B019002A8022 /* ZNBChatConversationModel.m */; };
+		046CDA141ED6B4A0002A8022 /* ZNBConversationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA131ED6B4A0002A8022 /* ZNBConversationController.m */; };
+		046CDA171ED6B5F2002A8022 /* ZNBChatConversationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA161ED6B5F2002A8022 /* ZNBChatConversationViewModel.m */; };
+		046CDA1B1ED6B76F002A8022 /* ZNBConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA191ED6B76F002A8022 /* ZNBConversationCell.m */; };
+		046CDA1C1ED6B76F002A8022 /* ZNBConversationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046CDA1A1ED6B76F002A8022 /* ZNBConversationCell.xib */; };
+		046CDA1F1ED6BBDC002A8022 /* ZNBAddConversationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA1E1ED6BBDC002A8022 /* ZNBAddConversationController.m */; };
+		04A910F81ED58A8E00AAF266 /* ZNBChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A910F71ED58A8E00AAF266 /* ZNBChatViewController.m */; };
+		04A910FB1ED58D5100AAF266 /* ZNBKeywordToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A910FA1ED58D5100AAF266 /* ZNBKeywordToolBar.m */; };
+		04A910FD1ED58D5800AAF266 /* ZNBKeywordToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A910FC1ED58D5800AAF266 /* ZNBKeywordToolBar.xib */; };
 		CC266807CDB8FCB6F9F8E99A /* libPods-ZNBCos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7CB10A47565F222369FBF0 /* libPods-ZNBCos.a */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +153,31 @@
 		04205D141ECDB2C9006AE5AE /* ZNBAddBGViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBAddBGViewController.xib; sourceTree = "<group>"; };
 		04205D171ECDBB43006AE5AE /* ZNBTimeLineBGModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBTimeLineBGModel.h; sourceTree = "<group>"; };
 		04205D181ECDBB43006AE5AE /* ZNBTimeLineBGModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBTimeLineBGModel.m; sourceTree = "<group>"; };
+		046CDA001ED67700002A8022 /* ZNBChatMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBChatMessageCell.h; sourceTree = "<group>"; };
+		046CDA011ED67700002A8022 /* ZNBChatMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBChatMessageCell.m; sourceTree = "<group>"; };
+		046CDA031ED67809002A8022 /* ZNBChatMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBChatMessageModel.h; sourceTree = "<group>"; };
+		046CDA041ED67809002A8022 /* ZNBChatMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBChatMessageModel.m; sourceTree = "<group>"; };
+		046CDA061ED67D91002A8022 /* ZNBChatMessageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBChatMessageViewModel.h; sourceTree = "<group>"; };
+		046CDA071ED67D91002A8022 /* ZNBChatMessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBChatMessageViewModel.m; sourceTree = "<group>"; };
+		046CDA0A1ED69427002A8022 /* ZNBAddChatMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBAddChatMessageController.h; sourceTree = "<group>"; };
+		046CDA0B1ED69427002A8022 /* ZNBAddChatMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBAddChatMessageController.m; sourceTree = "<group>"; };
+		046CDA0C1ED69427002A8022 /* ZNBAddChatMessageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBAddChatMessageController.xib; sourceTree = "<group>"; };
+		046CDA0F1ED6B019002A8022 /* ZNBChatConversationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBChatConversationModel.h; sourceTree = "<group>"; };
+		046CDA101ED6B019002A8022 /* ZNBChatConversationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBChatConversationModel.m; sourceTree = "<group>"; };
+		046CDA121ED6B4A0002A8022 /* ZNBConversationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBConversationController.h; sourceTree = "<group>"; };
+		046CDA131ED6B4A0002A8022 /* ZNBConversationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBConversationController.m; sourceTree = "<group>"; };
+		046CDA151ED6B5F2002A8022 /* ZNBChatConversationViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBChatConversationViewModel.h; sourceTree = "<group>"; };
+		046CDA161ED6B5F2002A8022 /* ZNBChatConversationViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBChatConversationViewModel.m; sourceTree = "<group>"; };
+		046CDA181ED6B76F002A8022 /* ZNBConversationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBConversationCell.h; sourceTree = "<group>"; };
+		046CDA191ED6B76F002A8022 /* ZNBConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBConversationCell.m; sourceTree = "<group>"; };
+		046CDA1A1ED6B76F002A8022 /* ZNBConversationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBConversationCell.xib; sourceTree = "<group>"; };
+		046CDA1D1ED6BBDC002A8022 /* ZNBAddConversationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBAddConversationController.h; sourceTree = "<group>"; };
+		046CDA1E1ED6BBDC002A8022 /* ZNBAddConversationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBAddConversationController.m; sourceTree = "<group>"; };
+		04A910F61ED58A8E00AAF266 /* ZNBChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBChatViewController.h; sourceTree = "<group>"; };
+		04A910F71ED58A8E00AAF266 /* ZNBChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBChatViewController.m; sourceTree = "<group>"; };
+		04A910F91ED58D5100AAF266 /* ZNBKeywordToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBKeywordToolBar.h; sourceTree = "<group>"; };
+		04A910FA1ED58D5100AAF266 /* ZNBKeywordToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBKeywordToolBar.m; sourceTree = "<group>"; };
+		04A910FC1ED58D5800AAF266 /* ZNBKeywordToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBKeywordToolBar.xib; sourceTree = "<group>"; };
 		0E7CB10A47565F222369FBF0 /* libPods-ZNBCos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZNBCos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D63A6752E32CA532764D2D /* Pods-ZNBCos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZNBCos.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZNBCos/Pods-ZNBCos.release.xcconfig"; sourceTree = "<group>"; };
 		FE2D7BEBAFB5EC94DFBA82B0 /* Pods-ZNBCos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZNBCos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZNBCos/Pods-ZNBCos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +240,7 @@
 		04205C6D1EC8C2D9006AE5AE /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				04A910F11ED58A2E00AAF266 /* 聊天界面 */,
 				04205C8A1EC98823006AE5AE /* BaseViewController */,
 				04205C6E1EC8C2D9006AE5AE /* 主页 */,
 				04205C751EC8C2D9006AE5AE /* 朋友圈 */,
@@ -421,6 +461,78 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		046CDA091ED693E3002A8022 /* 聊天子控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				046CDA0A1ED69427002A8022 /* ZNBAddChatMessageController.h */,
+				046CDA0B1ED69427002A8022 /* ZNBAddChatMessageController.m */,
+				046CDA0C1ED69427002A8022 /* ZNBAddChatMessageController.xib */,
+				046CDA1D1ED6BBDC002A8022 /* ZNBAddConversationController.h */,
+				046CDA1E1ED6BBDC002A8022 /* ZNBAddConversationController.m */,
+			);
+			path = "聊天子控制器";
+			sourceTree = "<group>";
+		};
+		04A910F11ED58A2E00AAF266 /* 聊天界面 */ = {
+			isa = PBXGroup;
+			children = (
+				04A910F21ED58A2E00AAF266 /* Controller */,
+				04A910F31ED58A2E00AAF266 /* Model */,
+				04A910F41ED58A2E00AAF266 /* View */,
+				04A910F51ED58A2E00AAF266 /* ViewModel */,
+			);
+			path = "聊天界面";
+			sourceTree = "<group>";
+		};
+		04A910F21ED58A2E00AAF266 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				046CDA091ED693E3002A8022 /* 聊天子控制器 */,
+				04A910F61ED58A8E00AAF266 /* ZNBChatViewController.h */,
+				04A910F71ED58A8E00AAF266 /* ZNBChatViewController.m */,
+				046CDA121ED6B4A0002A8022 /* ZNBConversationController.h */,
+				046CDA131ED6B4A0002A8022 /* ZNBConversationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04A910F31ED58A2E00AAF266 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				046CDA031ED67809002A8022 /* ZNBChatMessageModel.h */,
+				046CDA041ED67809002A8022 /* ZNBChatMessageModel.m */,
+				046CDA0F1ED6B019002A8022 /* ZNBChatConversationModel.h */,
+				046CDA101ED6B019002A8022 /* ZNBChatConversationModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04A910F41ED58A2E00AAF266 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04A910F91ED58D5100AAF266 /* ZNBKeywordToolBar.h */,
+				04A910FA1ED58D5100AAF266 /* ZNBKeywordToolBar.m */,
+				04A910FC1ED58D5800AAF266 /* ZNBKeywordToolBar.xib */,
+				046CDA001ED67700002A8022 /* ZNBChatMessageCell.h */,
+				046CDA011ED67700002A8022 /* ZNBChatMessageCell.m */,
+				046CDA181ED6B76F002A8022 /* ZNBConversationCell.h */,
+				046CDA191ED6B76F002A8022 /* ZNBConversationCell.m */,
+				046CDA1A1ED6B76F002A8022 /* ZNBConversationCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04A910F51ED58A2E00AAF266 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				046CDA061ED67D91002A8022 /* ZNBChatMessageViewModel.h */,
+				046CDA071ED67D91002A8022 /* ZNBChatMessageViewModel.m */,
+				046CDA151ED6B5F2002A8022 /* ZNBChatConversationViewModel.h */,
+				046CDA161ED6B5F2002A8022 /* ZNBChatConversationViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		76CA71441ACA5F1C4EB199C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,13 +616,16 @@
 				04205CE51ECBF408006AE5AE /* ZNBRaiseCmtView.xib in Resources */,
 				04205C891EC9089B006AE5AE /* Info.plist in Resources */,
 				04205CFB1ECC60F0006AE5AE /* ZNBAddLikesController.xib in Resources */,
+				046CDA1C1ED6B76F002A8022 /* ZNBConversationCell.xib in Resources */,
 				04205CDB1ECB1642006AE5AE /* ZNBSetTimeController.xib in Resources */,
 				04205CCC1ECB084A006AE5AE /* ZNBAddImageTextCell.xib in Resources */,
+				04A910FD1ED58D5800AAF266 /* ZNBKeywordToolBar.xib in Resources */,
 				04205CAF1EC9F9AA006AE5AE /* ZNBTimeLineTopView.xib in Resources */,
 				04205C561EC60666006AE5AE /* LaunchScreen.storyboard in Resources */,
 				04205CD61ECB0892006AE5AE /* ZNBSetAddressController.xib in Resources */,
 				04205C531EC60666006AE5AE /* Assets.xcassets in Resources */,
 				04205CE01ECB2A44006AE5AE /* ZNBAddImageTextEditCell.xib in Resources */,
+				046CDA0E1ED69427002A8022 /* ZNBAddChatMessageController.xib in Resources */,
 				04205C511EC60666006AE5AE /* Main.storyboard in Resources */,
 				04205CD11ECB087E006AE5AE /* ZNBSetNameController.xib in Resources */,
 				04205CF61ECC60E0006AE5AE /* ZNBAddCmtController.xib in Resources */,
@@ -579,18 +694,25 @@
 				04205D041ECD638A006AE5AE /* ZNBLikesLabel.m in Sources */,
 				04205C971EC99F71006AE5AE /* UIColor+Hex.m in Sources */,
 				04205CA61EC9AE8D006AE5AE /* ZNBTimeLineCmtModel.m in Sources */,
+				046CDA1F1ED6BBDC002A8022 /* ZNBAddConversationController.m in Sources */,
 				04205C821EC8C345006AE5AE /* ZNBTimeLineController.m in Sources */,
 				04205CB21ECA0B27006AE5AE /* ZNBTimeLineImageCell.m in Sources */,
 				04205CF51ECC60E0006AE5AE /* ZNBAddCmtController.m in Sources */,
 				04205CCB1ECB084A006AE5AE /* ZNBAddImageTextCell.m in Sources */,
 				04205C9D1EC9AC21006AE5AE /* ZNBTimeLineCell.m in Sources */,
 				04205C871EC907A3006AE5AE /* main.m in Sources */,
+				046CDA1B1ED6B76F002A8022 /* ZNBConversationCell.m in Sources */,
 				04205C981EC99F71006AE5AE /* UIImage+Image.m in Sources */,
+				046CDA021ED67701002A8022 /* ZNBChatMessageCell.m in Sources */,
 				04205D151ECDB2C9006AE5AE /* ZNBAddBGViewController.m in Sources */,
 				04205CD01ECB087E006AE5AE /* ZNBSetNameController.m in Sources */,
+				046CDA081ED67D91002A8022 /* ZNBChatMessageViewModel.m in Sources */,
 				04205CD51ECB0892006AE5AE /* ZNBSetAddressController.m in Sources */,
 				04205CDF1ECB2A44006AE5AE /* ZNBAddImageTextEditCell.m in Sources */,
 				04205CA91EC9E270006AE5AE /* ZNBTimeLineViewModel.m in Sources */,
+				04A910F81ED58A8E00AAF266 /* ZNBChatViewController.m in Sources */,
+				046CDA051ED67809002A8022 /* ZNBChatMessageModel.m in Sources */,
+				046CDA141ED6B4A0002A8022 /* ZNBConversationController.m in Sources */,
 				04205D071ECD71A5006AE5AE /* ZNBLikeBGView.m in Sources */,
 				04205D0E1ECDA492006AE5AE /* ZNBAnimationManager.m in Sources */,
 				04205C9A1EC99F71006AE5AE /* UIView+SFrame.m in Sources */,
@@ -601,9 +723,13 @@
 				04205D0A1ECD7C8A006AE5AE /* ZNBTimeLineCmtCell.m in Sources */,
 				04205CE31ECBF3FD006AE5AE /* ZNBRaiseCmtView.m in Sources */,
 				04205CBA1ECADD17006AE5AE /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */,
+				046CDA0D1ED69427002A8022 /* ZNBAddChatMessageController.m in Sources */,
 				04205CC61ECB07FA006AE5AE /* ZNBAddImageTextController.m in Sources */,
+				046CDA111ED6B019002A8022 /* ZNBChatConversationModel.m in Sources */,
 				04205C4B1EC60666006AE5AE /* AppDelegate.m in Sources */,
+				046CDA171ED6B5F2002A8022 /* ZNBChatConversationViewModel.m in Sources */,
 				04205D191ECDBB43006AE5AE /* ZNBTimeLineBGModel.m in Sources */,
+				04A910FB1ED58D5100AAF266 /* ZNBKeywordToolBar.m in Sources */,
 				04205C991EC99F71006AE5AE /* UIImage+Render.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
