@@ -3,7 +3,9 @@
 
 #####最终效果 
 
-![image](Images/IMG_0127.PNG)
+>![image](Images/动态.PNG)
+
+>![image](Images/聊天.PNG)
 
 实现细节请看Demo
 

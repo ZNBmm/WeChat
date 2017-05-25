@@ -41,6 +41,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self dealData];
+    self.title = @"会话";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
