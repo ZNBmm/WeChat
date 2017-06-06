@@ -97,7 +97,7 @@
 
 #pragma mark - TextViewDelegate
 - (void)textViewDidChange:(UITextView *)textView {
-    
+    [self changeQRColor];
 }
 
 #pragma mark - slider 事件
@@ -105,20 +105,23 @@
     _red = sender.value;
     self.redLabel.text = [NSString stringWithFormat:@"R:%.1f",sender.value];
     [self changeQRColor];
+    [_textView resignFirstResponder];
     
 }
 - (IBAction)greenSliderValueChange:(UISlider *)sender {
     _green = sender.value;
     self.greenLabel.text = [NSString stringWithFormat:@"G:%.1f",sender.value];
     [self changeQRColor];
+    [_textView resignFirstResponder];
 }
 - (IBAction)blueSliderValueChange:(UISlider *)sender {
     _blue = sender.value;
     self.blueLabel.text = [NSString stringWithFormat:@"B:%.1f",sender.value];
-    
+    [self changeQRColor];
+    [_textView resignFirstResponder];
 }
 - (void)changeQRColor {
-    [_textView resignFirstResponder];
+    
     ZNBQRCodeImage *image = [ZNBQRCodeImage codeImageWithString:_textView.text size:1200 color:ZNBColor(_red, _green, _blue) icon:_middleImage.image iconBorderColor:[UIColor whiteColor] iconBorderWidth:20 iconWidth:200 ];
     
     self.qrImageView.image = image;
