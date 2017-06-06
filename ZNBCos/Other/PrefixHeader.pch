@@ -25,7 +25,9 @@
 #define kDefaultBlackColor ZNBColor(20,20,20)
 #define kCmtBGColor ZNBColor(210,210,210)
 #define kBackGroundColor ZNBColor(240,240,240)
+
 #import "UIColor+Hex.h"
+#import "UIImageView+Color.h"
 #import "UIImage+Image.h"
 #import "UIView+SFrame.h"
 #import "UIImage+Render.h"
@@ -35,4 +37,6 @@
 #import "UITableViewCell+HYBMasonryAutoCellHeight.h"
 #import "ZNBAnimationManager.h"
 #import <YYText.h>
+#import "ZNBQRCodeImage.h"
+
 #endif /* PrefixHeader_pch */

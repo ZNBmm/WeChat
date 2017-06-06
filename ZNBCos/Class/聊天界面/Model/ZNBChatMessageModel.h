@@ -20,7 +20,7 @@
 @property NSInteger userType; // 0 代表自己 1 代表他人
 @property NSString *messageContent;
 @property NSData *messageImage;
-
+@property NSString *money;
 
 @end
 

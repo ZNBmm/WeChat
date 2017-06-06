@@ -18,7 +18,7 @@
     UINavigationBar *bar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[self]];
     
     NSMutableDictionary *attr = [NSMutableDictionary dictionary];
-    attr[NSFontAttributeName] = [UIFont fontWithName:@"AlNile-Bold" size:20];
+    attr[NSFontAttributeName] = [UIFont fontWithName:@"AlNile-Bold" size:18];
     attr[NSForegroundColorAttributeName] = [UIColor whiteColor];
     bar.titleTextAttributes = attr;
     bar.tintColor = [UIColor whiteColor];

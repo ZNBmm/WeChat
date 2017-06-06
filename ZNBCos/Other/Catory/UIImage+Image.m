@@ -269,5 +269,15 @@
     return newImage;
     
 }
-
+- (UIImage *)drawPiucureFrontImage:(UIImage *)personImage backImage:(UIImage *)hatImage blendMode:(CGBlendMode)blendMode alpha:(CGFloat)alpha margin:(CGFloat)margin
+{
+    CGSize newSize =[personImage size];
+    UIGraphicsBeginImageContext(newSize);
+    [personImage drawInRect:CGRectMake(margin,margin,newSize.width-2*margin,newSize.height-2*margin) blendMode:kCGBlendModeNormal alpha:1];
+    [hatImage drawInRect:CGRectMake(0,0,newSize.width,newSize.height) blendMode:blendMode alpha:alpha];
+    UIImage*newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
 @end

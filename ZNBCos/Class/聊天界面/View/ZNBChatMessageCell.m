@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UIImageView *messageImageView;
 /** 图片消息 */
 @property (nonatomic, strong) UIImageView *contentBg;
+
 @end
 @implementation ZNBChatMessageCell
 - (UIImageView *)iconImageView
@@ -91,8 +92,9 @@
 - (void)layoutSubviews {
 
     [super layoutSubviews];
+    
     if (self.viewModel.messageType == ZNBChatMessageTypeMe) {
-        
+       
         self.contentBg.image = [self resizableImageWithImageName:@"SenderTextNodeBkg"];
         self.contentBg.highlightedImage = [self resizableImageWithImageName:@"SenderTextNodeBkgHL"];
         [self.iconImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -115,6 +117,12 @@
             make.height.equalTo(@(self.viewModel.messageHeight));
             make.width.equalTo(@(self.viewModel.messageWidth));
             
+        }];
+        [self.messageImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.contentBg.mas_left).offset(kDefaultMargin);
+            make.top.equalTo(self.contentBg).offset(kDefaultMargin);
+            make.height.equalTo(@(self.viewModel.messageHeight));
+            make.width.equalTo(@(self.viewModel.messageWidth));
         }];
         
     }else if (self.viewModel.messageType == ZNBChatMessageTypeOther) {
@@ -143,6 +151,20 @@
             make.height.equalTo(@(self.viewModel.messageHeight));
             make.width.equalTo(@(self.viewModel.messageWidth));
         }];
+        [self.messageImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.contentBg.mas_left).offset(kDefaultMargin);
+            make.top.equalTo(self.contentBg).offset(kDefaultMargin);
+            make.height.equalTo(@(self.viewModel.messageHeight));
+            make.width.equalTo(@(self.viewModel.messageWidth));
+        }];
+    }
+    
+    if (self.viewModel.model.messageImage) {
+        self.messageTextLabel.hidden = YES;
+        self.messageImageView.hidden = NO;
+    }else {
+        self.messageTextLabel.hidden = NO;
+        self.messageImageView.hidden = YES;
     }
 }
 

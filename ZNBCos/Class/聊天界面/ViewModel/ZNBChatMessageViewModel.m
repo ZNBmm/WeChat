@@ -53,6 +53,13 @@
         self.nick = conversation.to;
     
     }
+    if (model.money.length) {
+        self.messageBgHeight = 85*kScreenW/375.0;
+        self.messageBgWidth = maxSize.width;
+        self.cellHeight = self.messageBgHeight+2*kTopMargin;
+    }else {
+    
+    }
     
 }
 @end

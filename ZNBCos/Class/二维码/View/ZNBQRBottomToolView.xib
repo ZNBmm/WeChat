@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZNBQRBottomToolView">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="106"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBq-5N-dAw">
+                    <rect key="frame" x="0.0" y="0.0" width="123.5" height="106"/>
+                    <state key="normal" title="背景图">
+                        <color key="titleColor" red="0.44705882349999998" green="0.76862745099999996" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbj-79-aC6">
+                    <rect key="frame" x="123.5" y="0.0" width="124" height="106"/>
+                    <state key="normal" title="背景颜色">
+                        <color key="titleColor" red="0.44705882349999998" green="0.76862745099999996" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHt-gJ-mHR">
+                    <rect key="frame" x="247.5" y="0.0" width="123.5" height="106"/>
+                    <state key="normal" title="二维码">
+                        <color key="titleColor" red="0.44705882349999998" green="0.76862745099999996" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Pbj-79-aC6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9tf-Hi-SPK"/>
+                <constraint firstItem="Pbj-79-aC6" firstAttribute="leading" secondItem="fBq-5N-dAw" secondAttribute="trailing" id="Br0-nV-mU5"/>
+                <constraint firstItem="IHt-gJ-mHR" firstAttribute="leading" secondItem="Pbj-79-aC6" secondAttribute="trailing" id="ITL-az-arD"/>
+                <constraint firstAttribute="trailing" secondItem="IHt-gJ-mHR" secondAttribute="trailing" id="LVf-1o-FkG"/>
+                <constraint firstItem="IHt-gJ-mHR" firstAttribute="width" secondItem="fBq-5N-dAw" secondAttribute="width" id="TY1-Z6-9kk"/>
+                <constraint firstAttribute="bottom" secondItem="Pbj-79-aC6" secondAttribute="bottom" id="TkS-be-cHB"/>
+                <constraint firstItem="fBq-5N-dAw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WFe-hs-xZI"/>
+                <constraint firstItem="Pbj-79-aC6" firstAttribute="height" secondItem="fBq-5N-dAw" secondAttribute="height" id="ZFB-NU-BKw"/>
+                <constraint firstItem="IHt-gJ-mHR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aM9-PK-0hu"/>
+                <constraint firstItem="IHt-gJ-mHR" firstAttribute="leading" secondItem="Pbj-79-aC6" secondAttribute="trailing" id="eA3-Lz-X63"/>
+                <constraint firstItem="IHt-gJ-mHR" firstAttribute="height" secondItem="fBq-5N-dAw" secondAttribute="height" id="fo2-A5-eEv"/>
+                <constraint firstItem="fBq-5N-dAw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="o9A-xn-GL3"/>
+                <constraint firstItem="Pbj-79-aC6" firstAttribute="width" secondItem="fBq-5N-dAw" secondAttribute="width" id="rYJ-k3-asv"/>
+                <constraint firstItem="Pbj-79-aC6" firstAttribute="leading" secondItem="fBq-5N-dAw" secondAttribute="trailing" id="vfn-Sz-CXP"/>
+                <constraint firstAttribute="bottom" secondItem="fBq-5N-dAw" secondAttribute="bottom" id="xlh-SG-EGV"/>
+                <constraint firstAttribute="bottom" secondItem="IHt-gJ-mHR" secondAttribute="bottom" id="zrr-ou-We6"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leftBtn" destination="fBq-5N-dAw" id="5v4-of-of3"/>
+                <outlet property="middleBtn" destination="Pbj-79-aC6" id="yyv-HS-FXJ"/>
+                <outlet property="rightBtn" destination="IHt-gJ-mHR" id="tOr-PQ-Mga"/>
+            </connections>
+            <point key="canvasLocation" x="18.5" y="-155"/>
+        </view>
+    </objects>
+</document>

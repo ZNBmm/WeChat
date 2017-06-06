@@ -10,6 +10,10 @@
 #import "ZNBKeywordToolBar.h"
 #import "ZNBChatMessageCell.h"
 #import "ZNBAddChatMessageController.h"
+#import "ZNBRedPageViewController.h"
+#import "PopoverView.h"
+#import "ZNBRedPageMessageCell.h"
+static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
 @interface ZNBChatViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic, strong) UITableView *chatList;
 @property (strong, nonatomic) ZNBKeywordToolBar *keyWordToolBar;
@@ -30,6 +34,7 @@
         _chatList.separatorStyle = UITableViewCellSeparatorStyleNone;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(listTap)];
         [_chatList registerClass:[ZNBChatMessageCell class] forCellReuseIdentifier:@"cell"];
+        [_chatList registerClass:[ZNBRedPageMessageCell class] forCellReuseIdentifier:reuseRedPageCell];
         [_chatList addGestureRecognizer:tap];
         [self.view addSubview:_chatList];
         [_chatList mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -85,7 +90,7 @@
     UIButton *cameraBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [cameraBtn setImage:[UIImage imageWithOriginalRender:@"barbuttonicon_InfoSingle"] forState:UIControlStateNormal];
     cameraBtn.frame = CGRectMake(0, 0, 30, 30);
-    [cameraBtn addTarget:self action:@selector(camerDidclick) forControlEvents:UIControlEventTouchUpInside];
+    [cameraBtn addTarget:self action:@selector(camerDidclick:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:cameraBtn];
     self.navigationItem.rightBarButtonItem = item;
 }
@@ -114,10 +119,25 @@
     [self keyWordToolBar];
     
 }
-- (void)camerDidclick {
-    ZNBAddChatMessageController *addMessageVc = [[ZNBAddChatMessageController alloc] init];
-    addMessageVc.conversationModel = self.conversationModel;
-    [self.navigationController pushViewController:addMessageVc animated:YES];
+- (void)camerDidclick:(UIButton *)btn {
+   
+    PopoverAction *action1 = [PopoverAction actionWithTitle:@"普通消息" handler:^(PopoverAction *action) {
+        ZNBAddChatMessageController *addMessageVc = [[ZNBAddChatMessageController alloc] init];
+        addMessageVc.conversationModel = self.conversationModel;
+        [self.navigationController pushViewController:addMessageVc animated:YES];
+    }];
+    PopoverAction *action2 = [PopoverAction actionWithTitle:@"红包消息" handler:^(PopoverAction *action) {
+        ZNBRedPageViewController *addRedPageMessageVc = [[ZNBRedPageViewController alloc] init];
+        addRedPageMessageVc.conversationModel = self.conversationModel;
+        [self.navigationController pushViewController:addRedPageMessageVc animated:YES];
+    }];
+//    PopoverAction *action3 = [PopoverAction actionWithTitle:@"图片消息" handler:^(PopoverAction *action) {
+//        
+//    }];
+    
+    PopoverView *popoverView = [PopoverView popoverView];
+    popoverView.style = PopoverViewStyleDark;
+    [popoverView showToView:btn withActions:@[action1,action2]];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
@@ -125,10 +145,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ZNBChatMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.viewModel = self.dataArr[indexPath.row];
-    return cell;
+    ZNBChatMessageViewModel *viewModel = self.dataArr[indexPath.row];
     
+    if (viewModel.model.money.length) {
+        ZNBRedPageMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseRedPageCell];
+        cell.viewModel = viewModel;
+        return cell;
+    }else {
+        ZNBChatMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        cell.viewModel = viewModel;
+        return cell;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

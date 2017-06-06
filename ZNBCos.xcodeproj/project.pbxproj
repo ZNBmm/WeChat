@@ -10,7 +10,6 @@
 		04205C4B1EC60666006AE5AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C4A1EC60666006AE5AE /* AppDelegate.m */; };
 		04205C511EC60666006AE5AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04205C4F1EC60666006AE5AE /* Main.storyboard */; };
 		04205C531EC60666006AE5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04205C521EC60666006AE5AE /* Assets.xcassets */; };
-		04205C561EC60666006AE5AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04205C541EC60666006AE5AE /* LaunchScreen.storyboard */; };
 		04205C7A1EC8C2D9006AE5AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C711EC8C2D9006AE5AE /* ViewController.m */; };
 		04205C821EC8C345006AE5AE /* ZNBTimeLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C811EC8C345006AE5AE /* ZNBTimeLineController.m */; };
 		04205C871EC907A3006AE5AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C861EC907A3006AE5AE /* main.m */; };
@@ -65,9 +64,41 @@
 		046CDA1B1ED6B76F002A8022 /* ZNBConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA191ED6B76F002A8022 /* ZNBConversationCell.m */; };
 		046CDA1C1ED6B76F002A8022 /* ZNBConversationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046CDA1A1ED6B76F002A8022 /* ZNBConversationCell.xib */; };
 		046CDA1F1ED6BBDC002A8022 /* ZNBAddConversationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA1E1ED6BBDC002A8022 /* ZNBAddConversationController.m */; };
+		046CDA231ED7D7B2002A8022 /* ZNBHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA211ED7D7B2002A8022 /* ZNBHomeCell.m */; };
+		046CDA241ED7D7B2002A8022 /* ZNBHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046CDA221ED7D7B2002A8022 /* ZNBHomeCell.xib */; };
+		046CDA271ED7E1BB002A8022 /* ZNBHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA261ED7E1BB002A8022 /* ZNBHomeTopView.m */; };
+		046CDA291ED7E1C6002A8022 /* ZNBHomeTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046CDA281ED7E1C6002A8022 /* ZNBHomeTopView.xib */; };
+		046CDA2B1ED7E21B002A8022 /* HomeData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046CDA2A1ED7E21B002A8022 /* HomeData.plist */; };
+		046CDA2E1ED7EC9F002A8022 /* ZNBHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA2D1ED7EC9F002A8022 /* ZNBHomeModel.m */; };
+		046CDA311ED80874002A8022 /* ZNBQRCodeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA301ED80874002A8022 /* ZNBQRCodeImage.m */; };
 		04A910F81ED58A8E00AAF266 /* ZNBChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A910F71ED58A8E00AAF266 /* ZNBChatViewController.m */; };
 		04A910FB1ED58D5100AAF266 /* ZNBKeywordToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A910FA1ED58D5100AAF266 /* ZNBKeywordToolBar.m */; };
 		04A910FD1ED58D5800AAF266 /* ZNBKeywordToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A910FC1ED58D5800AAF266 /* ZNBKeywordToolBar.xib */; };
+		04AE502D1EDDA42E00878D4E /* CustomCardCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE502C1EDDA42E00878D4E /* CustomCardCollectionViewFlowLayout.m */; };
+		04AE50351EDDA94C00878D4E /* ZNBQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50341EDDA94C00878D4E /* ZNBQRViewController.m */; };
+		04AE50391EDDAC5C00878D4E /* ZNBQRCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50371EDDAC5C00878D4E /* ZNBQRCollectionViewCell.m */; };
+		04AE503A1EDDAC5C00878D4E /* ZNBQRCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AE50381EDDAC5C00878D4E /* ZNBQRCollectionViewCell.xib */; };
+		04AE503D1EDDC1E000878D4E /* ZNBQRBottomToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE503C1EDDC1E000878D4E /* ZNBQRBottomToolView.m */; };
+		04AE503F1EDDC1E900878D4E /* ZNBQRBottomToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AE503E1EDDC1E900878D4E /* ZNBQRBottomToolView.xib */; };
+		04AE508C1EDECD3900878D4E /* UIImageView+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE508B1EDECD3900878D4E /* UIImageView+Color.m */; };
+		04AE50C81EE4355500878D4E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AE50C71EE4355500878D4E /* Launch Screen.storyboard */; };
+		04AE50DA1EE4F26B00878D4E /* fb_rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AE50CB1EE4F26B00878D4E /* fb_rotation.png */; };
+		04AE50DB1EE4F26B00878D4E /* fb_wave.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AE50CC1EE4F26B00878D4E /* fb_wave.png */; };
+		04AE50DC1EE4F26B00878D4E /* SXWaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AE50CD1EE4F26B00878D4E /* SXWaveCell.xib */; };
+		04AE50DD1EE4F26B00878D4E /* SXHalfWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50CF1EE4F26B00878D4E /* SXHalfWaveView.m */; };
+		04AE50DE1EE4F26B00878D4E /* SXViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50D11EE4F26B00878D4E /* SXViewAdditions.m */; };
+		04AE50DF1EE4F26B00878D4E /* SXWaterBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50D31EE4F26B00878D4E /* SXWaterBackground.m */; };
+		04AE50E01EE4F26B00878D4E /* SXWaveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50D51EE4F26B00878D4E /* SXWaveCell.m */; };
+		04AE50E11EE4F26B00878D4E /* SXWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50D71EE4F26B00878D4E /* SXWaveView.m */; };
+		04AE50E21EE4F26B00878D4E /* UIColor+Separate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50D91EE4F26B00878D4E /* UIColor+Separate.m */; };
+		04AE50E61EE511D200878D4E /* ZNBRedPageMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50E41EE511D200878D4E /* ZNBRedPageMessageCell.m */; };
+		04AE50EB1EE540FC00878D4E /* ZNBRedPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50E91EE540FC00878D4E /* ZNBRedPageViewController.m */; };
+		04AE50EC1EE540FC00878D4E /* ZNBRedPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AE50EA1EE540FC00878D4E /* ZNBRedPageViewController.xib */; };
+		04AE50F41EE546A900878D4E /* PopoverAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50EF1EE546A900878D4E /* PopoverAction.m */; };
+		04AE50F51EE546A900878D4E /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50F11EE546A900878D4E /* PopoverView.m */; };
+		04AE50F61EE546A900878D4E /* PopoverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50F31EE546A900878D4E /* PopoverViewCell.m */; };
+		04AE50F91EE645AD00878D4E /* ZNBAddQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE50F81EE645AD00878D4E /* ZNBAddQRViewController.m */; };
+		04AE50FB1EE6488B00878D4E /* ZNBAddQRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AE50FA1EE6488B00878D4E /* ZNBAddQRViewController.xib */; };
 		CC266807CDB8FCB6F9F8E99A /* libPods-ZNBCos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7CB10A47565F222369FBF0 /* libPods-ZNBCos.a */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +108,6 @@
 		04205C4A1EC60666006AE5AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04205C501EC60666006AE5AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04205C521EC60666006AE5AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04205C551EC60666006AE5AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04205C701EC8C2D9006AE5AE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		04205C711EC8C2D9006AE5AE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		04205C801EC8C345006AE5AE /* ZNBTimeLineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBTimeLineController.h; sourceTree = "<group>"; };
@@ -173,11 +203,64 @@
 		046CDA1A1ED6B76F002A8022 /* ZNBConversationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBConversationCell.xib; sourceTree = "<group>"; };
 		046CDA1D1ED6BBDC002A8022 /* ZNBAddConversationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBAddConversationController.h; sourceTree = "<group>"; };
 		046CDA1E1ED6BBDC002A8022 /* ZNBAddConversationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBAddConversationController.m; sourceTree = "<group>"; };
+		046CDA201ED7D7B2002A8022 /* ZNBHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBHomeCell.h; sourceTree = "<group>"; };
+		046CDA211ED7D7B2002A8022 /* ZNBHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBHomeCell.m; sourceTree = "<group>"; };
+		046CDA221ED7D7B2002A8022 /* ZNBHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBHomeCell.xib; sourceTree = "<group>"; };
+		046CDA251ED7E1BB002A8022 /* ZNBHomeTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBHomeTopView.h; sourceTree = "<group>"; };
+		046CDA261ED7E1BB002A8022 /* ZNBHomeTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBHomeTopView.m; sourceTree = "<group>"; };
+		046CDA281ED7E1C6002A8022 /* ZNBHomeTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBHomeTopView.xib; sourceTree = "<group>"; };
+		046CDA2A1ED7E21B002A8022 /* HomeData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeData.plist; sourceTree = "<group>"; };
+		046CDA2C1ED7EC9F002A8022 /* ZNBHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBHomeModel.h; sourceTree = "<group>"; };
+		046CDA2D1ED7EC9F002A8022 /* ZNBHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBHomeModel.m; sourceTree = "<group>"; };
+		046CDA2F1ED80874002A8022 /* ZNBQRCodeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBQRCodeImage.h; sourceTree = "<group>"; };
+		046CDA301ED80874002A8022 /* ZNBQRCodeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBQRCodeImage.m; sourceTree = "<group>"; };
 		04A910F61ED58A8E00AAF266 /* ZNBChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBChatViewController.h; sourceTree = "<group>"; };
 		04A910F71ED58A8E00AAF266 /* ZNBChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBChatViewController.m; sourceTree = "<group>"; };
 		04A910F91ED58D5100AAF266 /* ZNBKeywordToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBKeywordToolBar.h; sourceTree = "<group>"; };
 		04A910FA1ED58D5100AAF266 /* ZNBKeywordToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBKeywordToolBar.m; sourceTree = "<group>"; };
 		04A910FC1ED58D5800AAF266 /* ZNBKeywordToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBKeywordToolBar.xib; sourceTree = "<group>"; };
+		04AE502B1EDDA42E00878D4E /* CustomCardCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCardCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		04AE502C1EDDA42E00878D4E /* CustomCardCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCardCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		04AE50331EDDA94C00878D4E /* ZNBQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBQRViewController.h; sourceTree = "<group>"; };
+		04AE50341EDDA94C00878D4E /* ZNBQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBQRViewController.m; sourceTree = "<group>"; };
+		04AE50361EDDAC5C00878D4E /* ZNBQRCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBQRCollectionViewCell.h; sourceTree = "<group>"; };
+		04AE50371EDDAC5C00878D4E /* ZNBQRCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBQRCollectionViewCell.m; sourceTree = "<group>"; };
+		04AE50381EDDAC5C00878D4E /* ZNBQRCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBQRCollectionViewCell.xib; sourceTree = "<group>"; };
+		04AE503B1EDDC1E000878D4E /* ZNBQRBottomToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBQRBottomToolView.h; sourceTree = "<group>"; };
+		04AE503C1EDDC1E000878D4E /* ZNBQRBottomToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBQRBottomToolView.m; sourceTree = "<group>"; };
+		04AE503E1EDDC1E900878D4E /* ZNBQRBottomToolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBQRBottomToolView.xib; sourceTree = "<group>"; };
+		04AE508A1EDECD3900878D4E /* UIImageView+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Color.h"; sourceTree = "<group>"; };
+		04AE508B1EDECD3900878D4E /* UIImageView+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Color.m"; sourceTree = "<group>"; };
+		04AE50C71EE4355500878D4E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		04AE50CB1EE4F26B00878D4E /* fb_rotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_rotation.png; sourceTree = "<group>"; };
+		04AE50CC1EE4F26B00878D4E /* fb_wave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_wave.png; sourceTree = "<group>"; };
+		04AE50CD1EE4F26B00878D4E /* SXWaveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SXWaveCell.xib; sourceTree = "<group>"; };
+		04AE50CE1EE4F26B00878D4E /* SXHalfWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXHalfWaveView.h; sourceTree = "<group>"; };
+		04AE50CF1EE4F26B00878D4E /* SXHalfWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXHalfWaveView.m; sourceTree = "<group>"; };
+		04AE50D01EE4F26B00878D4E /* SXViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXViewAdditions.h; sourceTree = "<group>"; };
+		04AE50D11EE4F26B00878D4E /* SXViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXViewAdditions.m; sourceTree = "<group>"; };
+		04AE50D21EE4F26B00878D4E /* SXWaterBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWaterBackground.h; sourceTree = "<group>"; };
+		04AE50D31EE4F26B00878D4E /* SXWaterBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaterBackground.m; sourceTree = "<group>"; };
+		04AE50D41EE4F26B00878D4E /* SXWaveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWaveCell.h; sourceTree = "<group>"; };
+		04AE50D51EE4F26B00878D4E /* SXWaveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaveCell.m; sourceTree = "<group>"; };
+		04AE50D61EE4F26B00878D4E /* SXWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWaveView.h; sourceTree = "<group>"; };
+		04AE50D71EE4F26B00878D4E /* SXWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaveView.m; sourceTree = "<group>"; };
+		04AE50D81EE4F26B00878D4E /* UIColor+Separate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Separate.h"; sourceTree = "<group>"; };
+		04AE50D91EE4F26B00878D4E /* UIColor+Separate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Separate.m"; sourceTree = "<group>"; };
+		04AE50E31EE511D200878D4E /* ZNBRedPageMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBRedPageMessageCell.h; sourceTree = "<group>"; };
+		04AE50E41EE511D200878D4E /* ZNBRedPageMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBRedPageMessageCell.m; sourceTree = "<group>"; };
+		04AE50E81EE540FC00878D4E /* ZNBRedPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBRedPageViewController.h; sourceTree = "<group>"; };
+		04AE50E91EE540FC00878D4E /* ZNBRedPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBRedPageViewController.m; sourceTree = "<group>"; };
+		04AE50EA1EE540FC00878D4E /* ZNBRedPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBRedPageViewController.xib; sourceTree = "<group>"; };
+		04AE50EE1EE546A900878D4E /* PopoverAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverAction.h; sourceTree = "<group>"; };
+		04AE50EF1EE546A900878D4E /* PopoverAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverAction.m; sourceTree = "<group>"; };
+		04AE50F01EE546A900878D4E /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
+		04AE50F11EE546A900878D4E /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
+		04AE50F21EE546A900878D4E /* PopoverViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewCell.h; sourceTree = "<group>"; };
+		04AE50F31EE546A900878D4E /* PopoverViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewCell.m; sourceTree = "<group>"; };
+		04AE50F71EE645AD00878D4E /* ZNBAddQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBAddQRViewController.h; sourceTree = "<group>"; };
+		04AE50F81EE645AD00878D4E /* ZNBAddQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBAddQRViewController.m; sourceTree = "<group>"; };
+		04AE50FA1EE6488B00878D4E /* ZNBAddQRViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZNBAddQRViewController.xib; sourceTree = "<group>"; };
 		0E7CB10A47565F222369FBF0 /* libPods-ZNBCos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZNBCos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D63A6752E32CA532764D2D /* Pods-ZNBCos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZNBCos.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZNBCos/Pods-ZNBCos.release.xcconfig"; sourceTree = "<group>"; };
 		FE2D7BEBAFB5EC94DFBA82B0 /* Pods-ZNBCos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZNBCos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZNBCos/Pods-ZNBCos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -221,9 +304,9 @@
 				04205C4A1EC60666006AE5AE /* AppDelegate.m */,
 				04205C4F1EC60666006AE5AE /* Main.storyboard */,
 				04205C521EC60666006AE5AE /* Assets.xcassets */,
-				04205C541EC60666006AE5AE /* LaunchScreen.storyboard */,
 				04205C7B1EC8C2EC006AE5AE /* Other */,
 				04205C461EC60666006AE5AE /* Supporting Files */,
+				04AE50C71EE4355500878D4E /* Launch Screen.storyboard */,
 			);
 			path = ZNBCos;
 			sourceTree = "<group>";
@@ -244,6 +327,7 @@
 				04205C8A1EC98823006AE5AE /* BaseViewController */,
 				04205C6E1EC8C2D9006AE5AE /* 主页 */,
 				04205C751EC8C2D9006AE5AE /* 朋友圈 */,
+				04AE502E1EDDA68100878D4E /* 二维码 */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -271,6 +355,9 @@
 		04205C721EC8C2D9006AE5AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				046CDA2A1ED7E21B002A8022 /* HomeData.plist */,
+				046CDA2C1ED7EC9F002A8022 /* ZNBHomeModel.h */,
+				046CDA2D1ED7EC9F002A8022 /* ZNBHomeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +365,14 @@
 		04205C731EC8C2D9006AE5AE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04AE502B1EDDA42E00878D4E /* CustomCardCollectionViewFlowLayout.h */,
+				04AE502C1EDDA42E00878D4E /* CustomCardCollectionViewFlowLayout.m */,
+				046CDA201ED7D7B2002A8022 /* ZNBHomeCell.h */,
+				046CDA211ED7D7B2002A8022 /* ZNBHomeCell.m */,
+				046CDA221ED7D7B2002A8022 /* ZNBHomeCell.xib */,
+				046CDA251ED7E1BB002A8022 /* ZNBHomeTopView.h */,
+				046CDA261ED7E1BB002A8022 /* ZNBHomeTopView.m */,
+				046CDA281ED7E1C6002A8022 /* ZNBHomeTopView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,6 +480,8 @@
 				04205C941EC99F71006AE5AE /* UIImage+Render.m */,
 				04205C951EC99F71006AE5AE /* UIView+SFrame.h */,
 				04205C961EC99F71006AE5AE /* UIView+SFrame.m */,
+				04AE508A1EDECD3900878D4E /* UIImageView+Color.h */,
+				04AE508B1EDECD3900878D4E /* UIImageView+Color.m */,
 			);
 			path = Catory;
 			sourceTree = "<group>";
@@ -392,6 +489,8 @@
 		04205CB31ECADD17006AE5AE /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				04AE50ED1EE546A900878D4E /* PopoverView */,
+				04AE50C91EE4F26B00878D4E /* SXWaveAnimate */,
 				04205CB41ECADD17006AE5AE /* HYBMasonryAutoCellHeight */,
 			);
 			path = ThirdPart;
@@ -457,6 +556,8 @@
 			children = (
 				04205D0C1ECDA492006AE5AE /* ZNBAnimationManager.h */,
 				04205D0D1ECDA492006AE5AE /* ZNBAnimationManager.m */,
+				046CDA2F1ED80874002A8022 /* ZNBQRCodeImage.h */,
+				046CDA301ED80874002A8022 /* ZNBQRCodeImage.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -469,6 +570,9 @@
 				046CDA0C1ED69427002A8022 /* ZNBAddChatMessageController.xib */,
 				046CDA1D1ED6BBDC002A8022 /* ZNBAddConversationController.h */,
 				046CDA1E1ED6BBDC002A8022 /* ZNBAddConversationController.m */,
+				04AE50E81EE540FC00878D4E /* ZNBRedPageViewController.h */,
+				04AE50E91EE540FC00878D4E /* ZNBRedPageViewController.m */,
+				04AE50EA1EE540FC00878D4E /* ZNBRedPageViewController.xib */,
 			);
 			path = "聊天子控制器";
 			sourceTree = "<group>";
@@ -518,6 +622,8 @@
 				046CDA181ED6B76F002A8022 /* ZNBConversationCell.h */,
 				046CDA191ED6B76F002A8022 /* ZNBConversationCell.m */,
 				046CDA1A1ED6B76F002A8022 /* ZNBConversationCell.xib */,
+				04AE50E31EE511D200878D4E /* ZNBRedPageMessageCell.h */,
+				04AE50E41EE511D200878D4E /* ZNBRedPageMessageCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -531,6 +637,99 @@
 				046CDA161ED6B5F2002A8022 /* ZNBChatConversationViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04AE502E1EDDA68100878D4E /* 二维码 */ = {
+			isa = PBXGroup;
+			children = (
+				04AE502F1EDDA93600878D4E /* Controller */,
+				04AE50301EDDA93600878D4E /* Model */,
+				04AE50311EDDA93600878D4E /* View */,
+				04AE50321EDDA93600878D4E /* ViewModel */,
+			);
+			path = "二维码";
+			sourceTree = "<group>";
+		};
+		04AE502F1EDDA93600878D4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04AE50331EDDA94C00878D4E /* ZNBQRViewController.h */,
+				04AE50341EDDA94C00878D4E /* ZNBQRViewController.m */,
+				04AE50F71EE645AD00878D4E /* ZNBAddQRViewController.h */,
+				04AE50F81EE645AD00878D4E /* ZNBAddQRViewController.m */,
+				04AE50FA1EE6488B00878D4E /* ZNBAddQRViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04AE50301EDDA93600878D4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04AE50311EDDA93600878D4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04AE50361EDDAC5C00878D4E /* ZNBQRCollectionViewCell.h */,
+				04AE50371EDDAC5C00878D4E /* ZNBQRCollectionViewCell.m */,
+				04AE50381EDDAC5C00878D4E /* ZNBQRCollectionViewCell.xib */,
+				04AE503B1EDDC1E000878D4E /* ZNBQRBottomToolView.h */,
+				04AE503C1EDDC1E000878D4E /* ZNBQRBottomToolView.m */,
+				04AE503E1EDDC1E900878D4E /* ZNBQRBottomToolView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04AE50321EDDA93600878D4E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04AE50C91EE4F26B00878D4E /* SXWaveAnimate */ = {
+			isa = PBXGroup;
+			children = (
+				04AE50CA1EE4F26B00878D4E /* images */,
+				04AE50CE1EE4F26B00878D4E /* SXHalfWaveView.h */,
+				04AE50CF1EE4F26B00878D4E /* SXHalfWaveView.m */,
+				04AE50D01EE4F26B00878D4E /* SXViewAdditions.h */,
+				04AE50D11EE4F26B00878D4E /* SXViewAdditions.m */,
+				04AE50D21EE4F26B00878D4E /* SXWaterBackground.h */,
+				04AE50D31EE4F26B00878D4E /* SXWaterBackground.m */,
+				04AE50D41EE4F26B00878D4E /* SXWaveCell.h */,
+				04AE50D51EE4F26B00878D4E /* SXWaveCell.m */,
+				04AE50D61EE4F26B00878D4E /* SXWaveView.h */,
+				04AE50D71EE4F26B00878D4E /* SXWaveView.m */,
+				04AE50D81EE4F26B00878D4E /* UIColor+Separate.h */,
+				04AE50D91EE4F26B00878D4E /* UIColor+Separate.m */,
+			);
+			path = SXWaveAnimate;
+			sourceTree = "<group>";
+		};
+		04AE50CA1EE4F26B00878D4E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				04AE50CB1EE4F26B00878D4E /* fb_rotation.png */,
+				04AE50CC1EE4F26B00878D4E /* fb_wave.png */,
+				04AE50CD1EE4F26B00878D4E /* SXWaveCell.xib */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		04AE50ED1EE546A900878D4E /* PopoverView */ = {
+			isa = PBXGroup;
+			children = (
+				04AE50EE1EE546A900878D4E /* PopoverAction.h */,
+				04AE50EF1EE546A900878D4E /* PopoverAction.m */,
+				04AE50F01EE546A900878D4E /* PopoverView.h */,
+				04AE50F11EE546A900878D4E /* PopoverView.m */,
+				04AE50F21EE546A900878D4E /* PopoverViewCell.h */,
+				04AE50F31EE546A900878D4E /* PopoverViewCell.m */,
+			);
+			path = PopoverView;
 			sourceTree = "<group>";
 		};
 		76CA71441ACA5F1C4EB199C0 /* Frameworks */ = {
@@ -612,23 +811,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AE50DB1EE4F26B00878D4E /* fb_wave.png in Resources */,
 				04205D161ECDB2C9006AE5AE /* ZNBAddBGViewController.xib in Resources */,
 				04205CE51ECBF408006AE5AE /* ZNBRaiseCmtView.xib in Resources */,
 				04205C891EC9089B006AE5AE /* Info.plist in Resources */,
+				046CDA291ED7E1C6002A8022 /* ZNBHomeTopView.xib in Resources */,
 				04205CFB1ECC60F0006AE5AE /* ZNBAddLikesController.xib in Resources */,
+				04AE50FB1EE6488B00878D4E /* ZNBAddQRViewController.xib in Resources */,
 				046CDA1C1ED6B76F002A8022 /* ZNBConversationCell.xib in Resources */,
+				04AE50C81EE4355500878D4E /* Launch Screen.storyboard in Resources */,
+				04AE50EC1EE540FC00878D4E /* ZNBRedPageViewController.xib in Resources */,
 				04205CDB1ECB1642006AE5AE /* ZNBSetTimeController.xib in Resources */,
 				04205CCC1ECB084A006AE5AE /* ZNBAddImageTextCell.xib in Resources */,
 				04A910FD1ED58D5800AAF266 /* ZNBKeywordToolBar.xib in Resources */,
 				04205CAF1EC9F9AA006AE5AE /* ZNBTimeLineTopView.xib in Resources */,
-				04205C561EC60666006AE5AE /* LaunchScreen.storyboard in Resources */,
 				04205CD61ECB0892006AE5AE /* ZNBSetAddressController.xib in Resources */,
 				04205C531EC60666006AE5AE /* Assets.xcassets in Resources */,
+				04AE50DA1EE4F26B00878D4E /* fb_rotation.png in Resources */,
 				04205CE01ECB2A44006AE5AE /* ZNBAddImageTextEditCell.xib in Resources */,
+				046CDA241ED7D7B2002A8022 /* ZNBHomeCell.xib in Resources */,
+				04AE50DC1EE4F26B00878D4E /* SXWaveCell.xib in Resources */,
 				046CDA0E1ED69427002A8022 /* ZNBAddChatMessageController.xib in Resources */,
 				04205C511EC60666006AE5AE /* Main.storyboard in Resources */,
 				04205CD11ECB087E006AE5AE /* ZNBSetNameController.xib in Resources */,
 				04205CF61ECC60E0006AE5AE /* ZNBAddCmtController.xib in Resources */,
+				046CDA2B1ED7E21B002A8022 /* HomeData.plist in Resources */,
+				04AE503A1EDDAC5C00878D4E /* ZNBQRCollectionViewCell.xib in Resources */,
+				04AE503F1EDDC1E900878D4E /* ZNBQRBottomToolView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,34 +908,55 @@
 				04205CB21ECA0B27006AE5AE /* ZNBTimeLineImageCell.m in Sources */,
 				04205CF51ECC60E0006AE5AE /* ZNBAddCmtController.m in Sources */,
 				04205CCB1ECB084A006AE5AE /* ZNBAddImageTextCell.m in Sources */,
+				04AE50DF1EE4F26B00878D4E /* SXWaterBackground.m in Sources */,
 				04205C9D1EC9AC21006AE5AE /* ZNBTimeLineCell.m in Sources */,
 				04205C871EC907A3006AE5AE /* main.m in Sources */,
+				04AE50DE1EE4F26B00878D4E /* SXViewAdditions.m in Sources */,
+				04AE50E11EE4F26B00878D4E /* SXWaveView.m in Sources */,
+				04AE50E61EE511D200878D4E /* ZNBRedPageMessageCell.m in Sources */,
 				046CDA1B1ED6B76F002A8022 /* ZNBConversationCell.m in Sources */,
+				04AE503D1EDDC1E000878D4E /* ZNBQRBottomToolView.m in Sources */,
 				04205C981EC99F71006AE5AE /* UIImage+Image.m in Sources */,
 				046CDA021ED67701002A8022 /* ZNBChatMessageCell.m in Sources */,
+				04AE50F91EE645AD00878D4E /* ZNBAddQRViewController.m in Sources */,
+				046CDA2E1ED7EC9F002A8022 /* ZNBHomeModel.m in Sources */,
 				04205D151ECDB2C9006AE5AE /* ZNBAddBGViewController.m in Sources */,
 				04205CD01ECB087E006AE5AE /* ZNBSetNameController.m in Sources */,
+				04AE50F51EE546A900878D4E /* PopoverView.m in Sources */,
 				046CDA081ED67D91002A8022 /* ZNBChatMessageViewModel.m in Sources */,
+				04AE502D1EDDA42E00878D4E /* CustomCardCollectionViewFlowLayout.m in Sources */,
+				046CDA271ED7E1BB002A8022 /* ZNBHomeTopView.m in Sources */,
+				04AE50E01EE4F26B00878D4E /* SXWaveCell.m in Sources */,
 				04205CD51ECB0892006AE5AE /* ZNBSetAddressController.m in Sources */,
 				04205CDF1ECB2A44006AE5AE /* ZNBAddImageTextEditCell.m in Sources */,
 				04205CA91EC9E270006AE5AE /* ZNBTimeLineViewModel.m in Sources */,
 				04A910F81ED58A8E00AAF266 /* ZNBChatViewController.m in Sources */,
 				046CDA051ED67809002A8022 /* ZNBChatMessageModel.m in Sources */,
+				04AE50DD1EE4F26B00878D4E /* SXHalfWaveView.m in Sources */,
 				046CDA141ED6B4A0002A8022 /* ZNBConversationController.m in Sources */,
 				04205D071ECD71A5006AE5AE /* ZNBLikeBGView.m in Sources */,
 				04205D0E1ECDA492006AE5AE /* ZNBAnimationManager.m in Sources */,
 				04205C9A1EC99F71006AE5AE /* UIView+SFrame.m in Sources */,
+				04AE50351EDDA94C00878D4E /* ZNBQRViewController.m in Sources */,
 				04205CDA1ECB1642006AE5AE /* ZNBSetTimeController.m in Sources */,
 				04205CA01EC9ADDA006AE5AE /* ZNBTimeLineModel.m in Sources */,
+				04AE50E21EE4F26B00878D4E /* UIColor+Separate.m in Sources */,
 				04205C8D1EC988BB006AE5AE /* ZNBNavigationController.m in Sources */,
 				04205CAD1EC9F972006AE5AE /* ZNBTimeLineTopView.m in Sources */,
+				04AE508C1EDECD3900878D4E /* UIImageView+Color.m in Sources */,
+				04AE50391EDDAC5C00878D4E /* ZNBQRCollectionViewCell.m in Sources */,
 				04205D0A1ECD7C8A006AE5AE /* ZNBTimeLineCmtCell.m in Sources */,
 				04205CE31ECBF3FD006AE5AE /* ZNBRaiseCmtView.m in Sources */,
+				04AE50F61EE546A900878D4E /* PopoverViewCell.m in Sources */,
+				046CDA231ED7D7B2002A8022 /* ZNBHomeCell.m in Sources */,
+				046CDA311ED80874002A8022 /* ZNBQRCodeImage.m in Sources */,
+				04AE50EB1EE540FC00878D4E /* ZNBRedPageViewController.m in Sources */,
 				04205CBA1ECADD17006AE5AE /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */,
 				046CDA0D1ED69427002A8022 /* ZNBAddChatMessageController.m in Sources */,
 				04205CC61ECB07FA006AE5AE /* ZNBAddImageTextController.m in Sources */,
 				046CDA111ED6B019002A8022 /* ZNBChatConversationModel.m in Sources */,
 				04205C4B1EC60666006AE5AE /* AppDelegate.m in Sources */,
+				04AE50F41EE546A900878D4E /* PopoverAction.m in Sources */,
 				046CDA171ED6B5F2002A8022 /* ZNBChatConversationViewModel.m in Sources */,
 				04205D191ECDBB43006AE5AE /* ZNBTimeLineBGModel.m in Sources */,
 				04A910FB1ED58D5100AAF266 /* ZNBKeywordToolBar.m in Sources */,
@@ -743,14 +973,6 @@
 				04205C501EC60666006AE5AE /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		04205C541EC60666006AE5AE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04205C551EC60666006AE5AE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

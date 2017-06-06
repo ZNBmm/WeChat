@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Data</key>
+	<array>
+		<dict>
+			<key>colorHex</key>
+			<string>ffd247</string>
+			<key>title</key>
+			<string>朋友圈ZB</string>
+			<key>iconImage</key>
+			<string>好友</string>
+		</dict>
+		<dict>
+			<key>colorHex</key>
+			<string>ffd247</string>
+			<key>title</key>
+			<string>聊天ZB</string>
+			<key>iconImage</key>
+			<string>聊天</string>
+		</dict>
+		<dict>
+			<key>colorHex</key>
+			<string>ffd247</string>
+			<key>title</key>
+			<string>二维码ZB</string>
+			<key>iconImage</key>
+			<string>二维码</string>
+		</dict>
+	</array>
+</dict>
+</plist>

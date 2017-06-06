@@ -14,7 +14,7 @@
 
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.contentLabel = [[UILabel alloc] init];
-        [self.contentView addSubview:self.contentLabel];
+        [self addSubview:self.contentLabel];
         self.contentLabel.backgroundColor  = [UIColor clearColor];
         self.contentLabel.preferredMaxLayoutWidth = kCmtLabelWidth;
         self.backgroundColor = [UIColor clearColor];
@@ -22,9 +22,9 @@
         self.contentLabel.font = [UIFont systemFontOfSize:14];
         
         [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.contentView).offset(5);
-            make.right.mas_equalTo(self.contentView).offset(-5);
-            make.top.mas_equalTo(self.contentView).offset(3.0);//cell上部距离为3.0个间隙
+            make.left.mas_equalTo(self).offset(5);
+            make.right.mas_equalTo(self).offset(-5);
+            make.top.mas_equalTo(self).offset(3.0);//cell上部距离为3.0个间隙
         }];
         
         self.hyb_lastViewInCell = self.contentLabel;

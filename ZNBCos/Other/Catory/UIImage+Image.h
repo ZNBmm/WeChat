@@ -59,4 +59,5 @@
 
 - (UIImage *)compressImageWithMaxLimit:(CGFloat)maxLimit;
 
+- (UIImage *)drawPiucureFrontImage:(UIImage *)personImage backImage:(UIImage *)hatImage blendMode:(CGBlendMode)blendMode alpha:(CGFloat)alpha margin:(CGFloat)margin;
 @end
