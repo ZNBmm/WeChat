@@ -177,17 +177,20 @@ static NSString *const reuseCmtCell = @"reuseCmtCell";
     if (_likesLabel == nil) {
         UILabel *label = [[UILabel alloc] init];
         label.numberOfLines = 0;
+        label.adjustsFontSizeToFitWidth = YES;
+        label.textAlignment = NSTextAlignmentLeft;
         _likesLabel = label;
+        _likesLabel.preferredMaxLayoutWidth = kCmtLabelWidth-10;
         label.font = kFontSize(14);
         label.textColor = kFontColor;
         [self.likeBGView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.likeBGView);
-            make.right.equalTo(self.likeBGView);
+            make.left.equalTo(self.likeBGView).offset(5);
+            make.right.equalTo(self.likeBGView).offset(-5);
             make.top.equalTo(self.likeBGView).offset(9);
             make.height.equalTo(@0);
         }];
-        _likesLabel.preferredMaxLayoutWidth = (kScreenW - kLeftMargin-kImageWidth-kRightMargin-kRightMargin);
+        
     }
     return _likesLabel;
 }

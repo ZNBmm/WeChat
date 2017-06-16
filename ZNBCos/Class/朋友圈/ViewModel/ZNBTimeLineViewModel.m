@@ -62,22 +62,22 @@
     if (model.likes.length) {
         NSString *str = model.likes;
         UIFont *font = kFontSize(14);
-        CGSize size = CGSizeMake(kCmtLabelWidth, MAXFLOAT);
-        CGFloat textH = [str boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size.height;
+//        CGSize size = CGSizeMake(kCmtLabelWidth, MAXFLOAT);
+//        CGFloat textH = [str boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size.height;
         UIImage *image = [UIImage imageNamed:@"AlbumLikeSmall"];
         NSTextAttachment *attach = [[NSTextAttachment alloc] init];
         attach.image = image;
         // -((textH-image.size.height)*0.5)
         attach.bounds = CGRectMake(0, -5, image.size.width, image.size.height);
         NSAttributedString *attr = [NSAttributedString attributedStringWithAttachment:attach];
-        NSMutableAttributedString *muattr = [[NSMutableAttributedString alloc] initWithString:@" "];
+        NSMutableAttributedString *muattr = [[NSMutableAttributedString alloc] initWithString:@""];
         
         [muattr appendAttributedString:attr];
         [muattr appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
         [muattr appendAttributedString:[[NSAttributedString alloc] initWithString:model.likes]];
         [muattr addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, muattr.length)];
 //        // 计算正文文字的高度
-        CGSize maxSize = CGSizeMake(kCmtLabelWidth, MAXFLOAT);
+        CGSize maxSize = CGSizeMake(kCmtLabelWidth-10, MAXFLOAT);
         CGFloat attrTextH = [muattr boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin context:nil].size.height;
         self.likesHeight = attrTextH;
        
