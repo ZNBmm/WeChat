@@ -40,8 +40,15 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"会话列表"];
+    
     [self dealData];
     self.title = @"会话";
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear: animated];
+    [MobClick endLogPageView:@"会话列表"];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,7 +59,7 @@
 #pragma mark - 处理数据
 - (void)dealData {
     self.conversations = [ZNBChatConversationModel allObjects];
-    NSLog(@"所有的会话列表%@",self.conversations);
+    //NSLog(@"所有的会话列表%@",self.conversations);
     [self.tableView reloadData];
     if (self.conversations.count == 0) {
         [self showTips];

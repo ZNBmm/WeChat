@@ -24,6 +24,19 @@
    
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    [MobClick beginLogPageView:@"添加赞界面"];
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"添加赞界面"];
+    
+}
+
 - (void)textViewDidChange:(UITextView *)textView {
 
     if (textView.text.length) {

@@ -38,5 +38,10 @@
 #import "ZNBAnimationManager.h"
 #import <YYText.h>
 #import "ZNBQRCodeImage.h"
+#import <SVProgressHUD.h>
+#import "ZNBTimeTool.h"
+
+#import "UMMobClick/MobClick.h"
+
 
 #endif /* PrefixHeader_pch */

@@ -19,6 +19,8 @@
 @property (nonatomic, strong) UIImageView *messageImageView;
 /** 图片消息 */
 @property (nonatomic, strong) UIImageView *contentBg;
+/** 时间戳 */
+@property (strong, nonatomic) UILabel *timeLabel;
 
 @end
 @implementation ZNBChatMessageCell
@@ -61,6 +63,23 @@
     }
     return _contentBg;
 }
+
+- (UILabel *)timeLabel
+{
+    if (_timeLabel == nil) {
+        _timeLabel = [[UILabel alloc] init];
+        _timeLabel.font = [UIFont systemFontOfSize:13];
+        _timeLabel.textColor = [UIColor whiteColor];
+        _timeLabel.backgroundColor = ZNBColor(200, 200, 200);
+        _timeLabel.text = @" 昨天 下午7:43 ";
+        _timeLabel.textAlignment = NSTextAlignmentCenter;
+        _timeLabel.layer.cornerRadius = 3;
+        _timeLabel.layer.masksToBounds = YES;
+        
+        [self addSubview:_timeLabel];
+    }
+    return _timeLabel;
+}
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -76,6 +95,8 @@
     [self messageImageView];
     [self messageTextLabel];
     
+    [self timeLabel];
+    
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.backgroundColor = [UIColor clearColor];
     
@@ -86,12 +107,29 @@
     self.iconImageView.image = viewModel.avatar;
     self.messageTextLabel.text = viewModel.model.messageContent;
     self.messageImageView.image = [UIImage imageWithData:viewModel.model.messageImage];
+    self.timeLabel.text = viewModel.timeStr;
     
 }
 
 - (void)layoutSubviews {
 
     [super layoutSubviews];
+    if (self.viewModel.timeStr.length) {
+        [self.timeLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self);
+            make.top.equalTo(self).offset(20);
+            make.height.equalTo(@17);
+            
+        }];
+    }else {
+        [self.timeLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self);
+            make.top.equalTo(self).offset(0);
+            make.height.equalTo(@0);
+            
+        }];
+    }
+    
     
     if (self.viewModel.messageType == ZNBChatMessageTypeMe) {
        
@@ -99,7 +137,7 @@
         self.contentBg.highlightedImage = [self resizableImageWithImageName:@"SenderTextNodeBkgHL"];
         [self.iconImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self).offset(-kLeftMargin);
-            make.top.equalTo(self).offset(kTopMargin);
+            make.top.equalTo(self.timeLabel.mas_bottom).offset(10*kScale);
             make.width.equalTo(@(kAvatarSize));
             make.height.equalTo(@(kAvatarSize));
         }];
@@ -133,7 +171,7 @@
         self.contentBg.highlightedImage = [self resizableImageWithImageName:@"ReceiverTextNodeBkg"];
         [self.iconImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(kLeftMargin);
-            make.top.equalTo(self).offset(kTopMargin);
+            make.top.equalTo(self.timeLabel.mas_bottom).offset(10*kScale);
             make.width.equalTo(@(kAvatarSize));
             make.height.equalTo(@(kAvatarSize));
         }];

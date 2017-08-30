@@ -35,7 +35,18 @@ typedef enum : NSUInteger {
     UITapGestureRecognizer *tapGes1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAvatarView)];
     [self.avatarView addGestureRecognizer:tapGes1];
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    [MobClick beginLogPageView:@"添加背景图界面"];
+}
 
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"添加背景图界面"];
+    
+}
 - (void)saveInfor {
 
     if (!self.avatarImageView.image || !self.bgImageView.image || !self.textF.text.length) {

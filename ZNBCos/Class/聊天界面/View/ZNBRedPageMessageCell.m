@@ -20,7 +20,7 @@
 //contacts_helloword
 /** 文本消息 */
 @property (nonatomic, strong) YYLabel     *messageTextLabel;
-
+@property (strong, nonatomic) UILabel *timeLabel;
 @end
 
 @implementation ZNBRedPageMessageCell
@@ -74,6 +74,23 @@
     }
     return _moneyLabel;
 }
+
+- (UILabel *)timeLabel
+{
+    if (_timeLabel == nil) {
+        _timeLabel = [[UILabel alloc] init];
+        _timeLabel.font = [UIFont systemFontOfSize:13];
+        _timeLabel.textColor = [UIColor whiteColor];
+        _timeLabel.backgroundColor = ZNBColor(200, 200, 200);
+        _timeLabel.text = @" 昨天 下午7:43 ";
+        _timeLabel.textAlignment = NSTextAlignmentCenter;
+        _timeLabel.layer.cornerRadius = 3;
+        _timeLabel.layer.masksToBounds = YES;
+        
+        [self addSubview:_timeLabel];
+    }
+    return _timeLabel;
+}
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -112,13 +129,29 @@
     
     [super layoutSubviews];
     
+    if (self.viewModel.timeStr.length) {
+        [self.timeLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self);
+            make.top.equalTo(self).offset(20);
+            make.height.equalTo(@17);
+            
+        }];
+    }else {
+        [self.timeLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self);
+            make.top.equalTo(self).offset(0);
+            make.height.equalTo(@0);
+            
+        }];
+    }
+    
     if (self.viewModel.messageType == ZNBChatMessageTypeMe) {
         
         self.contentBg.image = [self resizableImageWithImageName:@"zhuanzhuang_from"];
         
         [self.iconImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self).offset(-kLeftMargin);
-            make.top.equalTo(self).offset(kTopMargin);
+            make.top.equalTo(self.timeLabel.mas_bottom).offset(10*kScale);
             make.width.equalTo(@(kAvatarSize));
             make.height.equalTo(@(kAvatarSize));
         }];
@@ -154,7 +187,7 @@
       
         [self.iconImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(kLeftMargin);
-            make.top.equalTo(self).offset(kTopMargin);
+            make.top.equalTo(self.timeLabel.mas_bottom).offset(10*kScale);
             make.width.equalTo(@(kAvatarSize));
             make.height.equalTo(@(kAvatarSize));
         }];

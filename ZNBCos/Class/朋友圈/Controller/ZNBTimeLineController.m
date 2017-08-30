@@ -14,6 +14,7 @@
 #import "ZNBAddLikesController.h"
 #import "ZNBAddBGViewController.h"
 #import "ZNBTimeLineBGModel.h"
+
 static NSString *const reuseCell = @"ZNBTimeLineCell";
 @interface ZNBTimeLineController ()<UITableViewDelegate,UITableViewDataSource,ZNBTimeLineCellDelegate>
 @property (weak, nonatomic) UITableView *tableView;
@@ -55,8 +56,7 @@ static NSString *const reuseCell = @"ZNBTimeLineCell";
     [self setUpNav];
     
     [self setUpTableView];
-    
-    
+
 }
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
@@ -66,8 +66,15 @@ static NSString *const reuseCell = @"ZNBTimeLineCell";
 - (void)viewWillAppear:(BOOL)animated {
 
     [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"朋友圈主界面"];
     [self detalData];
     
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [MobClick endLogPageView:@"朋友圈直接面"];
 }
 #pragma mark - 初始化UI操作
 - (void)setUpNav {
@@ -95,14 +102,18 @@ static NSString *const reuseCell = @"ZNBTimeLineCell";
 - (void)detalData {
 
     RLMResults<ZNBTimeLineModel *> *timeLineModels = [ZNBTimeLineModel allObjects];
-    RLMResults<ZNBImageModel *>*imageArr = [ZNBImageModel allObjects];
-    NSLog(@"imageArr--%@",imageArr);
-    NSLog(@"%@",timeLineModels);
+//    RLMResults<ZNBImageModel *>*imageArr = [ZNBImageModel allObjects];
+//    NSLog(@"imageArr--%@",imageArr);
+//    NSLog(@"%@",timeLineModels);
     [self.dataSource removeAllObjects];
     for (ZNBTimeLineModel *model in timeLineModels) {
+        
         ZNBTimeLineViewModel *viewModel = [ZNBTimeLineViewModel viewModelWithModel:model];
         [self.dataSource addObject:viewModel];
     }
+    
+    self.dataSource = (NSMutableArray *)[[self.dataSource reverseObjectEnumerator] allObjects];
+    
     RLMResults<ZNBTimeLineBGModel *>*bgModels = [ZNBTimeLineBGModel allObjects];
     ZNBTimeLineBGModel *model = bgModels.lastObject;
     if (model) {
@@ -276,6 +287,6 @@ static NSString *const reuseCell = @"ZNBTimeLineCell";
 }
 - (void)dealloc {
 
-    NSLog(@"%s",__func__);
+   // NSLog(@"%s",__func__);
 }
 @end

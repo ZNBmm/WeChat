@@ -14,12 +14,14 @@
 #import "ZNBHomeModel.h"
 #import "ZNBHomeTopView.h"
 #import "ZNBQRViewController.h"
+#import <iAd/iAd.h>
 
 #define kTopViewHeight kScale*250
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,ADBannerViewDelegate>
 @property (weak, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataArr;
 @property (weak, nonatomic) ZNBHomeTopView *topView;
+@property (strong, nonatomic) ADBannerView *bannerView;
 @end
 
 @implementation ViewController
@@ -32,6 +34,14 @@
         [self.view addSubview:topView];
     }
     return _topView;
+}
+- (ADBannerView *)bannerView
+{
+    if (_bannerView == nil) {
+        _bannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 50)];
+        _bannerView.delegate = self;
+    }
+    return _bannerView;
 }
 - (NSMutableArray *)dataArr
 {
@@ -81,6 +91,9 @@
     }
     [self.tableView reloadData];
     
+   
+    self.tableView.tableFooterView = self.bannerView;
+    
 
 }
 - (void)sessionMake {
@@ -100,19 +113,27 @@
     
     
 }
-int total = 50;
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.title  = @"发现";
     
+    [MobClick beginLogPageView:@"主页"];
+    
+    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     
     [self.navigationController setNavigationBarHidden:YES animated:animated];
-    [self.topView upDateWaveCellWithPresent:total++];
+    NSInteger total = [[NSUserDefaults standardUserDefaults] integerForKey:@"total"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self.topView upDateWaveCellWithPresent:(int)total];
 }
 - (void)viewWillDisappear:(BOOL)animated {
     
     [super viewWillDisappear:animated];
+    
+    [MobClick endLogPageView:@"主页"];
+    
     [self.navigationController setNavigationBarHidden:NO animated:animated];
      [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
@@ -174,7 +195,12 @@ int total = 50;
     // Dispose of any resources that can be recreated.
 }
 
-//- (UIStatusBarStyle)preferredStatusBarStyle {
-//    return UIStatusBarStyleDefault;
-//}
+#pragma mark - 广告代理方法
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    NSLog(@"%s",__func__);
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    NSLog(@"%s",__func__);
+}
 @end

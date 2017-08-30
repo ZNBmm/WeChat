@@ -61,5 +61,19 @@
     
     }
     
+    
+    
+    if (model.isShowTime) {
+        NSTimeInterval timeInter = [model.timeInterval doubleValue];
+        NSDate *oldDate = [NSDate dateWithTimeIntervalSince1970:timeInter];
+        self.timeStr = [ZNBTimeTool dateStringWithDate:oldDate];
+        
+        NSLog(@"%@",model.timeInterval);
+        
+        self.cellHeight += 40;
+    }else {
+    
+    }
+   
 }
 @end

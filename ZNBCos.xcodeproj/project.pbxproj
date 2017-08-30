@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041A1C591F10F43F00E9786B /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 041A1C581F10F43F00E9786B /* NotificationService.m */; };
+		041A1C5D1F10F43F00E9786B /* ZNBPush.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 041A1C551F10F43F00E9786B /* ZNBPush.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		041A1C641F13131A00E9786B /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 041A1C631F13131A00E9786B /* AppDelegate+JPush.m */; };
+		041A1C6A1F13224800E9786B /* ZNBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041A1C691F13224800E9786B /* ZNBWebViewController.m */; };
 		04205C4B1EC60666006AE5AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04205C4A1EC60666006AE5AE /* AppDelegate.m */; };
 		04205C511EC60666006AE5AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04205C4F1EC60666006AE5AE /* Main.storyboard */; };
 		04205C531EC60666006AE5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04205C521EC60666006AE5AE /* Assets.xcassets */; };
@@ -71,6 +75,9 @@
 		046CDA2B1ED7E21B002A8022 /* HomeData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046CDA2A1ED7E21B002A8022 /* HomeData.plist */; };
 		046CDA2E1ED7EC9F002A8022 /* ZNBHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA2D1ED7EC9F002A8022 /* ZNBHomeModel.m */; };
 		046CDA311ED80874002A8022 /* ZNBQRCodeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CDA301ED80874002A8022 /* ZNBQRCodeImage.m */; };
+		04982DEA1F5459D100CD06CC /* ZNBTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04982DE91F5459D100CD06CC /* ZNBTimeTool.m */; };
+		04982DED1F545A5D00CD06CC /* NSDate+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 04982DEC1F545A5D00CD06CC /* NSDate+Date.m */; };
+		04982DEF1F55579900CD06CC /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04982DEE1F55579900CD06CC /* iAd.framework */; };
 		04A910F81ED58A8E00AAF266 /* ZNBChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A910F71ED58A8E00AAF266 /* ZNBChatViewController.m */; };
 		04A910FB1ED58D5100AAF266 /* ZNBKeywordToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A910FA1ED58D5100AAF266 /* ZNBKeywordToolBar.m */; };
 		04A910FD1ED58D5800AAF266 /* ZNBKeywordToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A910FC1ED58D5800AAF266 /* ZNBKeywordToolBar.xib */; };
@@ -102,7 +109,41 @@
 		CC266807CDB8FCB6F9F8E99A /* libPods-ZNBCos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7CB10A47565F222369FBF0 /* libPods-ZNBCos.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		041A1C5B1F10F43F00E9786B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04205C3B1EC60666006AE5AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 041A1C541F10F43E00E9786B;
+			remoteInfo = ZNBPush;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		041A1C611F10F44000E9786B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				041A1C5D1F10F43F00E9786B /* ZNBPush.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		041A1C551F10F43F00E9786B /* ZNBPush.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ZNBPush.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		041A1C571F10F43F00E9786B /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		041A1C581F10F43F00E9786B /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		041A1C5A1F10F43F00E9786B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041A1C621F13131A00E9786B /* AppDelegate+JPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JPush.h"; sourceTree = "<group>"; };
+		041A1C631F13131A00E9786B /* AppDelegate+JPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+JPush.m"; sourceTree = "<group>"; };
+		041A1C651F1317B700E9786B /* ZNBCos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZNBCos.entitlements; sourceTree = "<group>"; };
+		041A1C661F131CC300E9786B /* ZNBPush.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZNBPush.entitlements; sourceTree = "<group>"; };
+		041A1C681F13224800E9786B /* ZNBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBWebViewController.h; sourceTree = "<group>"; };
+		041A1C691F13224800E9786B /* ZNBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBWebViewController.m; sourceTree = "<group>"; };
 		04205C431EC60666006AE5AE /* ZNBCos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZNBCos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04205C491EC60666006AE5AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04205C4A1EC60666006AE5AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -214,6 +255,11 @@
 		046CDA2D1ED7EC9F002A8022 /* ZNBHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBHomeModel.m; sourceTree = "<group>"; };
 		046CDA2F1ED80874002A8022 /* ZNBQRCodeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBQRCodeImage.h; sourceTree = "<group>"; };
 		046CDA301ED80874002A8022 /* ZNBQRCodeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBQRCodeImage.m; sourceTree = "<group>"; };
+		04982DE81F5459D100CD06CC /* ZNBTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBTimeTool.h; sourceTree = "<group>"; };
+		04982DE91F5459D100CD06CC /* ZNBTimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBTimeTool.m; sourceTree = "<group>"; };
+		04982DEB1F545A5D00CD06CC /* NSDate+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Date.h"; sourceTree = "<group>"; };
+		04982DEC1F545A5D00CD06CC /* NSDate+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Date.m"; sourceTree = "<group>"; };
+		04982DEE1F55579900CD06CC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		04A910F61ED58A8E00AAF266 /* ZNBChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBChatViewController.h; sourceTree = "<group>"; };
 		04A910F71ED58A8E00AAF266 /* ZNBChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZNBChatViewController.m; sourceTree = "<group>"; };
 		04A910F91ED58D5100AAF266 /* ZNBKeywordToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZNBKeywordToolBar.h; sourceTree = "<group>"; };
@@ -267,10 +313,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		041A1C521F10F43E00E9786B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04205C401EC60666006AE5AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04982DEF1F55579900CD06CC /* iAd.framework in Frameworks */,
 				CC266807CDB8FCB6F9F8E99A /* libPods-ZNBCos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,10 +332,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041A1C561F10F43F00E9786B /* ZNBPush */ = {
+			isa = PBXGroup;
+			children = (
+				041A1C661F131CC300E9786B /* ZNBPush.entitlements */,
+				041A1C5A1F10F43F00E9786B /* Info.plist */,
+				041A1C571F10F43F00E9786B /* NotificationService.h */,
+				041A1C581F10F43F00E9786B /* NotificationService.m */,
+			);
+			path = ZNBPush;
+			sourceTree = "<group>";
+		};
+		041A1C671F13222D00E9786B /* WEB */ = {
+			isa = PBXGroup;
+			children = (
+				041A1C681F13224800E9786B /* ZNBWebViewController.h */,
+				041A1C691F13224800E9786B /* ZNBWebViewController.m */,
+			);
+			path = WEB;
+			sourceTree = "<group>";
+		};
 		04205C3A1EC60666006AE5AE = {
 			isa = PBXGroup;
 			children = (
 				04205C451EC60666006AE5AE /* ZNBCos */,
+				041A1C561F10F43F00E9786B /* ZNBPush */,
 				04205C441EC60666006AE5AE /* Products */,
 				E4E500F4D1B976B13B806EB5 /* Pods */,
 				76CA71441ACA5F1C4EB199C0 /* Frameworks */,
@@ -292,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				04205C431EC60666006AE5AE /* ZNBCos.app */,
+				041A1C551F10F43F00E9786B /* ZNBPush.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,9 +375,12 @@
 		04205C451EC60666006AE5AE /* ZNBCos */ = {
 			isa = PBXGroup;
 			children = (
+				041A1C651F1317B700E9786B /* ZNBCos.entitlements */,
 				04205C6D1EC8C2D9006AE5AE /* Class */,
 				04205C491EC60666006AE5AE /* AppDelegate.h */,
 				04205C4A1EC60666006AE5AE /* AppDelegate.m */,
+				041A1C621F13131A00E9786B /* AppDelegate+JPush.h */,
+				041A1C631F13131A00E9786B /* AppDelegate+JPush.m */,
 				04205C4F1EC60666006AE5AE /* Main.storyboard */,
 				04205C521EC60666006AE5AE /* Assets.xcassets */,
 				04205C7B1EC8C2EC006AE5AE /* Other */,
@@ -328,6 +407,7 @@
 				04205C6E1EC8C2D9006AE5AE /* 主页 */,
 				04205C751EC8C2D9006AE5AE /* 朋友圈 */,
 				04AE502E1EDDA68100878D4E /* 二维码 */,
+				041A1C671F13222D00E9786B /* WEB */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -482,6 +562,8 @@
 				04205C961EC99F71006AE5AE /* UIView+SFrame.m */,
 				04AE508A1EDECD3900878D4E /* UIImageView+Color.h */,
 				04AE508B1EDECD3900878D4E /* UIImageView+Color.m */,
+				04982DEB1F545A5D00CD06CC /* NSDate+Date.h */,
+				04982DEC1F545A5D00CD06CC /* NSDate+Date.m */,
 			);
 			path = Catory;
 			sourceTree = "<group>";
@@ -558,6 +640,8 @@
 				04205D0D1ECDA492006AE5AE /* ZNBAnimationManager.m */,
 				046CDA2F1ED80874002A8022 /* ZNBQRCodeImage.h */,
 				046CDA301ED80874002A8022 /* ZNBQRCodeImage.m */,
+				04982DE81F5459D100CD06CC /* ZNBTimeTool.h */,
+				04982DE91F5459D100CD06CC /* ZNBTimeTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -735,6 +819,7 @@
 		76CA71441ACA5F1C4EB199C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04982DEE1F55579900CD06CC /* iAd.framework */,
 				0E7CB10A47565F222369FBF0 /* libPods-ZNBCos.a */,
 			);
 			name = Frameworks;
@@ -752,6 +837,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		041A1C541F10F43E00E9786B /* ZNBPush */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041A1C601F10F44000E9786B /* Build configuration list for PBXNativeTarget "ZNBPush" */;
+			buildPhases = (
+				041A1C511F10F43E00E9786B /* Sources */,
+				041A1C521F10F43E00E9786B /* Frameworks */,
+				041A1C531F10F43E00E9786B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZNBPush;
+			productName = ZNBPush;
+			productReference = 041A1C551F10F43F00E9786B /* ZNBPush.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		04205C421EC60666006AE5AE /* ZNBCos */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04205C5A1EC60666006AE5AE /* Build configuration list for PBXNativeTarget "ZNBCos" */;
@@ -762,10 +864,12 @@
 				04205C411EC60666006AE5AE /* Resources */,
 				D57A379D861F04D0CE28D594 /* [CP] Embed Pods Frameworks */,
 				B2B31798D948974C4D5467E3 /* [CP] Copy Pods Resources */,
+				041A1C611F10F44000E9786B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				041A1C5C1F10F43F00E9786B /* PBXTargetDependency */,
 			);
 			name = ZNBCos;
 			productName = ZNBCos;
@@ -781,10 +885,28 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CoderZNBmm;
 				TargetAttributes = {
+					041A1C541F10F43E00E9786B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = B3R5RSW6TE;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
 					04205C421EC60666006AE5AE = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = B3R5RSW6TE;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -802,11 +924,19 @@
 			projectRoot = "";
 			targets = (
 				04205C421EC60666006AE5AE /* ZNBCos */,
+				041A1C541F10F43E00E9786B /* ZNBPush */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		041A1C531F10F43E00E9786B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04205C411EC60666006AE5AE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -892,6 +1022,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		041A1C511F10F43E00E9786B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041A1C591F10F43F00E9786B /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04205C3F1EC60666006AE5AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -910,6 +1048,7 @@
 				04205CCB1ECB084A006AE5AE /* ZNBAddImageTextCell.m in Sources */,
 				04AE50DF1EE4F26B00878D4E /* SXWaterBackground.m in Sources */,
 				04205C9D1EC9AC21006AE5AE /* ZNBTimeLineCell.m in Sources */,
+				041A1C6A1F13224800E9786B /* ZNBWebViewController.m in Sources */,
 				04205C871EC907A3006AE5AE /* main.m in Sources */,
 				04AE50DE1EE4F26B00878D4E /* SXViewAdditions.m in Sources */,
 				04AE50E11EE4F26B00878D4E /* SXWaveView.m in Sources */,
@@ -917,6 +1056,7 @@
 				046CDA1B1ED6B76F002A8022 /* ZNBConversationCell.m in Sources */,
 				04AE503D1EDDC1E000878D4E /* ZNBQRBottomToolView.m in Sources */,
 				04205C981EC99F71006AE5AE /* UIImage+Image.m in Sources */,
+				041A1C641F13131A00E9786B /* AppDelegate+JPush.m in Sources */,
 				046CDA021ED67701002A8022 /* ZNBChatMessageCell.m in Sources */,
 				04AE50F91EE645AD00878D4E /* ZNBAddQRViewController.m in Sources */,
 				046CDA2E1ED7EC9F002A8022 /* ZNBHomeModel.m in Sources */,
@@ -935,6 +1075,7 @@
 				04AE50DD1EE4F26B00878D4E /* SXHalfWaveView.m in Sources */,
 				046CDA141ED6B4A0002A8022 /* ZNBConversationController.m in Sources */,
 				04205D071ECD71A5006AE5AE /* ZNBLikeBGView.m in Sources */,
+				04982DED1F545A5D00CD06CC /* NSDate+Date.m in Sources */,
 				04205D0E1ECDA492006AE5AE /* ZNBAnimationManager.m in Sources */,
 				04205C9A1EC99F71006AE5AE /* UIView+SFrame.m in Sources */,
 				04AE50351EDDA94C00878D4E /* ZNBQRViewController.m in Sources */,
@@ -957,6 +1098,7 @@
 				046CDA111ED6B019002A8022 /* ZNBChatConversationModel.m in Sources */,
 				04205C4B1EC60666006AE5AE /* AppDelegate.m in Sources */,
 				04AE50F41EE546A900878D4E /* PopoverAction.m in Sources */,
+				04982DEA1F5459D100CD06CC /* ZNBTimeTool.m in Sources */,
 				046CDA171ED6B5F2002A8022 /* ZNBChatConversationViewModel.m in Sources */,
 				04205D191ECDBB43006AE5AE /* ZNBTimeLineBGModel.m in Sources */,
 				04A910FB1ED58D5100AAF266 /* ZNBKeywordToolBar.m in Sources */,
@@ -965,6 +1107,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		041A1C5C1F10F43F00E9786B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 041A1C541F10F43E00E9786B /* ZNBPush */;
+			targetProxy = 041A1C5B1F10F43F00E9786B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		04205C4F1EC60666006AE5AE /* Main.storyboard */ = {
@@ -978,6 +1128,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		041A1C5E1F10F44000E9786B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ZNBPush/ZNBPush.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = B3R5RSW6TE;
+				INFOPLIST_FILE = ZNBPush/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.znb.chat.ZNBPush;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3ce598d7-4ca2-47d6-9888-6aa26cebce37";
+				PROVISIONING_PROFILE_SPECIFIER = znbChatPush.development;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		041A1C5F1F10F44000E9786B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ZNBPush/ZNBPush.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = B3R5RSW6TE;
+				INFOPLIST_FILE = ZNBPush/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.znb.chat.ZNBPush;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "761c4a7d-c44d-4b6a-92cb-bd6a9050760f";
+				PROVISIONING_PROFILE_SPECIFIER = znbchatPush.Appstore;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		04205C581EC60666006AE5AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1071,14 +1255,17 @@
 			baseConfigurationReference = FE2D7BEBAFB5EC94DFBA82B0 /* Pods-ZNBCos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZNBCos/ZNBCos.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = B3R5RSW6TE;
 				GCC_PREFIX_HEADER = ZNBCos/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = ZNBCos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.znb.detail;
+				PRODUCT_BUNDLE_IDENTIFIER = com.znb.chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b1688c28-e0e1-4bb2-936a-0a195cbb7fa3";
+				PROVISIONING_PROFILE_SPECIFIER = znbChat.develpment;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1088,14 +1275,17 @@
 			baseConfigurationReference = A0D63A6752E32CA532764D2D /* Pods-ZNBCos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = ZNBCos/ZNBCos.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = B3R5RSW6TE;
 				GCC_PREFIX_HEADER = ZNBCos/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = ZNBCos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.znb.detail;
+				PRODUCT_BUNDLE_IDENTIFIER = com.znb.chat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "594b9c08-ea7d-447c-b7c7-67d08b4246e2";
+				PROVISIONING_PROFILE_SPECIFIER = znbChat.Appstore;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1103,6 +1293,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		041A1C601F10F44000E9786B /* Build configuration list for PBXNativeTarget "ZNBPush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041A1C5E1F10F44000E9786B /* Debug */,
+				041A1C5F1F10F44000E9786B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		04205C3E1EC60666006AE5AE /* Build configuration list for PBXProject "ZNBCos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

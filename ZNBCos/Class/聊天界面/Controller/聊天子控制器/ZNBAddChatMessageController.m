@@ -22,6 +22,16 @@
     self.indicateLabel.text = self.conversationModel.from;
     [self setupNav];
 }
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"添加聊天界面"];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"添加聊天界面"];
+}
 - (IBAction)switchClick:(UISwitch *)sender {
     if (sender.isOn) {
         self.indicateLabel.text = self.conversationModel.from;
@@ -39,6 +49,13 @@
 }
 
 - (void)saveImageText {
+    
+    if (!self.textView.text.length) {
+        [SVProgressHUD showErrorWithStatus:@"补充完整信息"];
+        [ZNBAnimationManager shakeView:self.view];
+        return;
+    }
+    
     RLMRealm *realm = [RLMRealm defaultRealm];
     ZNBChatConversationModel *model = [ZNBChatConversationModel objectForPrimaryKey:self.conversationModel.conversationID];
     NSDate *date = [NSDate date];
@@ -48,6 +65,21 @@
     messageModel.messageContent = self.textView.text;
     messageModel.conversationID = model.conversationID;
     messageModel.userType = self.switchBtn.isOn?0:1;
+    
+    
+    ZNBChatMessageModel *lastMessageModel = model.messageArr.lastObject;
+    double lastTimeValue = [lastMessageModel.timeInterval doubleValue];
+    double curTimeValue = [messageID doubleValue];
+    messageModel.timeInterval = messageID;
+    if ((curTimeValue - lastTimeValue) > 180){
+        messageModel.isShowTime = YES;
+    }else {
+        messageModel.isShowTime = NO;
+    }
+    
+    
+    
+    
     [realm transactionWithBlock:^{
         [model.messageArr addObject:messageModel];
     }];

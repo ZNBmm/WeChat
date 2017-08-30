@@ -32,7 +32,18 @@
     [super viewDidAppear:animated];
     [self.textF becomeFirstResponder];
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    [MobClick beginLogPageView:@"设置名字界面"];
+}
 
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"设置名字界面"];
+    
+}
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.textF resignFirstResponder];
 }

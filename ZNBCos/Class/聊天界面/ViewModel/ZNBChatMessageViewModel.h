@@ -26,5 +26,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) ZNBChatMessageType messageType;
 @property (nonatomic, copy) NSString *nick;
 @property (nonatomic, copy) NSString *money;
+/** 时间戳 */
+@property (nonatomic, copy) NSString *timeStr;
 + (instancetype)viewModelWithModel:(ZNBChatMessageModel *)model;
 @end

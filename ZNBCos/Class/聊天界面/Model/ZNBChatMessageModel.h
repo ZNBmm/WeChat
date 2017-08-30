@@ -21,6 +21,8 @@
 @property NSString *messageContent;
 @property NSData *messageImage;
 @property NSString *money;
+@property NSString *timeInterval; // 时间戳
+@property BOOL isShowTime; // 是否显示时间戳
 
 @end
 

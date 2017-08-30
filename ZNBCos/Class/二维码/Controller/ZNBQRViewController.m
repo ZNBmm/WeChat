@@ -99,6 +99,17 @@ static NSString *const reuseCell = @"ZNBQRCollectionViewCell";
     [self setupNav];
     
 }
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [MobClick beginLogPageView:@"二维码界面"];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"二维码界面"];
+}
 - (void)setupNav {
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(saveImageText)];
 }

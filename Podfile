@@ -8,4 +8,9 @@ target 'ZNBCos' do
     pod 'TZImagePickerController', '~> 1.7.8'
     pod 'YYText', '~> 1.0.7'
     pod 'YYImage', '~> 1.0.4'
+    pod 'JPush'
+    pod 'SVProgressHUD', '~> 2.1.2'
+    pod 'Bugly'
+    #标准sdk 含idfa
+    pod 'UMengAnalytics'
 end

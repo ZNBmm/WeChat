@@ -25,6 +25,15 @@
      self.messageLabel.text = self.conversationModel.from;
     [self setupNav];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"添加红包界面"];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"添加红包界面"];
+}
 - (IBAction)changeMessageType:(UISwitch *)sender {
     if (sender.isOn) {
         self.messageLabel.text = self.conversationModel.from;
@@ -55,6 +64,17 @@
     messageModel.conversationID = model.conversationID;
     messageModel.userType = self.messageType.isOn?0:1;
     messageModel.messageContent = self.redPageType.isOn ? @"微信转账" : @"已收款";
+    
+    ZNBChatMessageModel *lastMessageModel = model.messageArr.lastObject;
+    double lastTimeValue = [lastMessageModel.timeInterval doubleValue];
+    double curTimeValue = [messageID doubleValue];
+    messageModel.timeInterval = messageID;
+    if ((curTimeValue - lastTimeValue) > 180){
+        messageModel.isShowTime = YES;
+    }else {
+        messageModel.isShowTime = NO;
+    }
+    
     [realm transactionWithBlock:^{
         [model.messageArr addObject:messageModel];
     }];

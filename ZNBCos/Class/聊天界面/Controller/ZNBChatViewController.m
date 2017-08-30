@@ -32,10 +32,10 @@ static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
         _chatList.delegate = self;
         _chatList.dataSource = self;
         _chatList.separatorStyle = UITableViewCellSeparatorStyleNone;
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(listTap)];
+       
         [_chatList registerClass:[ZNBChatMessageCell class] forCellReuseIdentifier:@"cell"];
         [_chatList registerClass:[ZNBRedPageMessageCell class] forCellReuseIdentifier:reuseRedPageCell];
-        [_chatList addGestureRecognizer:tap];
+        
         [self.view addSubview:_chatList];
         [_chatList mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.top.equalTo(self.view);
@@ -79,11 +79,18 @@ static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [MobClick beginLogPageView:@"聊天界面"];
     [self dealData];
     
     if (self.dataArr.count == 0) {
         [self showTips];
     }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"聊天界面"];
 }
 #pragma mark - 初始化UI操作
 - (void)setUpNav {
@@ -164,6 +171,38 @@ static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
     
     return viewModel.cellHeight;
 }
+
+#pragma mark - tableViewDelegate 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    ZNBChatMessageViewModel *viewModel = self.dataArr[indexPath.row];
+    
+    //NSLog(@"%@",viewModel.model);
+    
+    UIAlertController *alertVc = [UIAlertController  alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *del = [UIAlertAction actionWithTitle:@"删除本条" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        [realm beginWriteTransaction];
+        [realm deleteObject:viewModel.model];
+        [realm commitWriteTransaction];
+        
+        [self dealData];
+    }];
+    
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alertVc addAction:del];
+    
+    [alertVc addAction:cancel];
+    
+    [self presentViewController:alertVc animated:YES completion:nil];
+    
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
@@ -176,9 +215,6 @@ static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
 - (void)showTips {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"皮皮友情提示" message:@"点击右上角的白色小人添加消息" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"知道了", nil];
     [alertView show];
-}
-- (void)listTap {
-
 }
 
 @end

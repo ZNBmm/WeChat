@@ -26,7 +26,18 @@
     [super viewDidAppear:animated];
     [self.cityTextF becomeFirstResponder];
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    [MobClick beginLogPageView:@"添加发布位置界面"];
+}
 
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"添加发布位置界面"];
+    
+}
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 
     [self.cityTextF resignFirstResponder];
