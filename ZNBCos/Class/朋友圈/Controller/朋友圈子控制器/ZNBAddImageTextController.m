@@ -148,6 +148,11 @@ static NSString *const reuseCell = @"ZNBTimeLineImageCell";
    
     
     [self.navigationController popViewControllerAnimated:YES];
+    
+    if (_handle) {
+        _handle();
+    }
+    
 }
 - (void)setUpTableView {
 

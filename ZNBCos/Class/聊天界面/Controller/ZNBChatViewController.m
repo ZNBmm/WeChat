@@ -13,20 +13,32 @@
 #import "ZNBRedPageViewController.h"
 #import "PopoverView.h"
 #import "ZNBRedPageMessageCell.h"
+
+#import "GDTMobBannerView.h"
+
+static NSString *appkey = @"1106386544";
+static NSString *posId = @"7040529554115440";
+
 static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
-@interface ZNBChatViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface ZNBChatViewController ()<UITableViewDataSource,UITableViewDelegate,GDTMobBannerViewDelegate>
 @property(nonatomic, strong) UITableView *chatList;
 @property (strong, nonatomic) ZNBKeywordToolBar *keyWordToolBar;
 @property (strong, nonatomic) NSMutableArray *dataArr;
+@property (strong, nonatomic) GDTMobBannerView *bannerView;
+@property (strong, nonatomic) UIView *bannerContent;
+
 @end
 
-@implementation ZNBChatViewController
+@implementation ZNBChatViewController{
+   BOOL _isClose;
+}
+
 #pragma mark ==== 懒加载 ===
 
 - (UITableView *)chatList {
     
     if (!_chatList) {
-        _chatList = [[UITableView alloc]init];
+        _chatList = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
         _chatList.backgroundColor = ZNBColor(236, 237, 241);
         _chatList.tableFooterView = [[UIView alloc]init];
         _chatList.delegate = self;
@@ -60,6 +72,28 @@ static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
     }
     return _keyWordToolBar;
 }
+- (UIView *)bannerContent
+{
+    if (_bannerContent == nil) {
+        _bannerContent = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 0)];
+        
+        [_bannerContent addSubview:self.bannerView];
+    }
+    return _bannerContent;
+}
+- (GDTMobBannerView *)bannerView
+{
+    if (_bannerView == nil) {
+        _bannerView = [[GDTMobBannerView alloc] initWithFrame:CGRectMake(0, 10, kScreenW, 50) appkey:appkey placementId:posId];
+        _bannerView.delegate = self;
+        _bannerView.currentViewController = self;
+        _bannerView.isAnimationOn = YES;
+        _bannerView.showCloseBtn = YES;
+        _bannerView.isGpsOn = YES;
+        [_bannerView loadAdAndShow];
+    }
+    return _bannerView;
+}
 
 - (NSMutableArray *)dataArr
 {
@@ -76,6 +110,7 @@ static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setUpNav];
+    _isClose = NO;
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -86,6 +121,7 @@ static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
     if (self.dataArr.count == 0) {
         [self showTips];
     }
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -171,7 +207,27 @@ static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
     
     return viewModel.cellHeight;
 }
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 
+     BOOL isPurchase = [[NSUserDefaults standardUserDefaults] valueForKey:kIsPurchase];
+    if (isPurchase || _isClose) {
+        return [UIView new];
+    }else {
+    
+        return self.bannerContent;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+
+    BOOL isPurchase = [[NSUserDefaults standardUserDefaults] valueForKey:kIsPurchase];
+    if (isPurchase || _isClose) {
+        return 0.001;
+    }else {
+        
+        return 60;
+    }
+}
 #pragma mark - tableViewDelegate 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
@@ -215,6 +271,33 @@ static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
 - (void)showTips {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"皮皮友情提示" message:@"点击右上角的白色小人添加消息" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"知道了", nil];
     [alertView show];
+}
+
+
+#pragma mark - 广告代理方法
+- (void)bannerViewDidReceived
+{
+    self.bannerContent.znb_height = 60;
+    
+}
+
+- (void)bannerViewWillClose {
+    self.bannerContent.znb_height = 0;
+    
+    self.bannerView = nil;
+    _isClose = YES;
+    
+    [self.chatList reloadData];
+    
+}
+
+- (void)bannerViewFailToReceived:(NSError *)error {
+    self.bannerContent.znb_height = 0;
+    
+    self.bannerView = nil;
+    _isClose = YES;
+    
+    [self.chatList reloadData];
 }
 
 @end

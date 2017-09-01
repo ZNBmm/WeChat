@@ -37,10 +37,16 @@
     
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [SVProgressHUD showWithStatus:@"正在加载..."];
-    NSInteger total = [[NSUserDefaults standardUserDefaults] integerForKey:@"total"];
-    total += 1;
-    [[NSUserDefaults standardUserDefaults] setInteger:total forKey:@"total"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    if ([self.source isEqualToString:@"support"]) {
+        
+    }else {
+        NSInteger total = [[NSUserDefaults standardUserDefaults] integerForKey:@"total"];
+        total += 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:total forKey:@"total"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
 }
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     

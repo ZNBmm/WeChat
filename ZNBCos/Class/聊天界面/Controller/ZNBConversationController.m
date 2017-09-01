@@ -11,12 +11,47 @@
 #import "ZNBConversationCell.h"
 #import "ZNBAddConversationController.h"
 #import "ZNBChatViewController.h"
-@interface ZNBConversationController ()<UITableViewDelegate,UITableViewDataSource>
+#import "GDTMobBannerView.h"
+
+static NSString *appkey = @"1106386544";
+static NSString *posId = @"8010627544016226";
+
+@interface ZNBConversationController ()<UITableViewDelegate,UITableViewDataSource,GDTMobBannerViewDelegate>
 @property (weak, nonatomic) UITableView *tableView;
 @property (strong, nonatomic)  RLMResults<ZNBChatConversationModel*>*conversations;
+@property (strong, nonatomic) GDTMobBannerView *bannerView;
+@property (strong, nonatomic) UIView *bannerContent;
+
 @end
 
 @implementation ZNBConversationController
+
+- (UIView *)bannerContent
+{
+    if (_bannerContent == nil) {
+        _bannerContent = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 0)];
+        
+        [_bannerContent addSubview:self.bannerView];
+    }
+    return _bannerContent;
+}
+- (GDTMobBannerView *)bannerView
+{
+    if (_bannerView == nil) {
+        
+        
+        _bannerView = [[GDTMobBannerView alloc] initWithFrame:CGRectMake(0, 10, kScreenW, 50) appkey:appkey placementId:posId];
+        _bannerView.delegate = self;
+        _bannerView.currentViewController = self;
+        _bannerView.isAnimationOn = YES;
+        _bannerView.showCloseBtn = YES;
+        _bannerView.isGpsOn = YES;
+        
+        
+    }
+    return _bannerView;
+}
+
 - (UITableView *)tableView
 {
     if (_tableView == nil) {
@@ -42,6 +77,16 @@
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:@"会话列表"];
     
+    BOOL isPurchase = [[NSUserDefaults standardUserDefaults] valueForKey:kIsPurchase];
+    if (isPurchase) {
+        
+        self.bannerView = nil;
+        self.bannerContent = nil;
+    }else {
+        [self.bannerView loadAdAndShow];
+        
+    }
+    
     [self dealData];
     self.title = @"会话";
 }
@@ -54,6 +99,8 @@
     [super viewDidLoad];
     
     [self setUpNav];
+    
+    self.tableView.tableFooterView = self.bannerContent;
     
 }
 #pragma mark - 处理数据
@@ -146,6 +193,22 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - 广告代理方法
+- (void)bannerViewDidReceived
+{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.bannerContent.znb_height = 60;
+        self.tableView.tableFooterView = self.bannerContent;
+    }];
+}
+
+- (void)bannerViewFailToReceived:(NSError *)error {
+    [UIView animateWithDuration:0.5 animations:^{
+        self.bannerContent.znb_height = 0;
+        self.tableView.tableFooterView = self.bannerContent;
+    }];
 }
 
 

@@ -14,14 +14,24 @@
 #import "ZNBHomeModel.h"
 #import "ZNBHomeTopView.h"
 #import "ZNBQRViewController.h"
-#import <iAd/iAd.h>
+
+#import "ZNBMineViewController.h"
+#import "GDTMobBannerView.h"
 
 #define kTopViewHeight kScale*250
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,ADBannerViewDelegate>
+
+// 1106386544
+// 9060728554207423
+static NSString *appkey = @"1106386544";
+static NSString *posId = @"9060728554207423";
+
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,GDTMobBannerViewDelegate>
 @property (weak, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataArr;
 @property (weak, nonatomic) ZNBHomeTopView *topView;
-@property (strong, nonatomic) ADBannerView *bannerView;
+@property (strong, nonatomic) GDTMobBannerView *bannerView;
+@property (strong, nonatomic) UIView *bannerContent;
+
 @end
 
 @implementation ViewController
@@ -35,14 +45,28 @@
     }
     return _topView;
 }
-- (ADBannerView *)bannerView
+- (UIView *)bannerContent
+{
+    if (_bannerContent == nil) {
+         _bannerContent = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 0)];
+        
+        [_bannerContent addSubview:self.bannerView];
+    }
+    return _bannerContent;
+}
+- (GDTMobBannerView *)bannerView
 {
     if (_bannerView == nil) {
-        _bannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 50)];
+        _bannerView = [[GDTMobBannerView alloc] initWithFrame:CGRectMake(20, 10, kScreenW-40, 50) appkey:appkey placementId:posId];
         _bannerView.delegate = self;
+        _bannerView.currentViewController = self;
+        _bannerView.isAnimationOn = YES;
+        _bannerView.showCloseBtn = YES;
+        _bannerView.isGpsOn = YES;
     }
     return _bannerView;
 }
+
 - (NSMutableArray *)dataArr
 {
     if (_dataArr == nil) {
@@ -58,7 +82,7 @@
         _tableView = tableView;
         tableView.delegate = self;
         tableView.dataSource = self;
-        tableView.contentInset = UIEdgeInsetsMake(kTopViewHeight, 0, 0, 0);
+        tableView.contentInset = UIEdgeInsetsMake(kTopViewHeight, 0, 30, 0);
         tableView.backgroundColor = [UIColor clearColor];
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZNBHomeCell class]) bundle:nil] forCellReuseIdentifier:@"cell"];
@@ -71,6 +95,8 @@
     }
     return _tableView;
 }
+
+
 - (void)viewWillLayoutSubviews {
 
     [super viewWillLayoutSubviews];
@@ -91,9 +117,6 @@
     }
     [self.tableView reloadData];
     
-   
-    self.tableView.tableFooterView = self.bannerView;
-    
 
 }
 - (void)sessionMake {
@@ -108,7 +131,12 @@
 }
 - (void)qrImageMake {
 
-     [self.navigationController pushViewController:[[ZNBQRViewController alloc]init] animated:YES];}
+     [self.navigationController pushViewController:[[ZNBQRViewController alloc]init] animated:YES];
+}
+
+- (void)personCenter {
+    [self.navigationController pushViewController:[[ZNBMineViewController alloc]init] animated:YES];
+}
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     
@@ -117,6 +145,17 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.title  = @"发现";
+    
+    BOOL isPurchase = [[NSUserDefaults standardUserDefaults] valueForKey:kIsPurchase];
+    if (isPurchase) {
+        
+        self.bannerView = nil;
+        self.bannerContent = nil;
+    }else {
+        [self.bannerContent addSubview:self.bannerView];
+        [self.bannerView loadAdAndShow];
+        
+    }
     
     [MobClick beginLogPageView:@"主页"];
     
@@ -180,6 +219,8 @@
         [self sessionMake];
     }else if (indexPath.row == 2) {
         [self qrImageMake];
+    }else {
+        [self personCenter];
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -195,12 +236,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 #pragma mark - 广告代理方法
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
-    NSLog(@"%s",__func__);
+- (void)bannerViewDidReceived
+{
+    self.bannerContent.znb_height = 60;
+    self.tableView.tableHeaderView = self.bannerContent;
 }
 
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-    NSLog(@"%s",__func__);
+- (void)bannerViewWillClose {
+    self.bannerContent.znb_height = 0;
+    self.tableView.tableHeaderView = self.bannerContent;
+    self.bannerView = nil;
 }
+
+- (void)bannerViewFailToReceived:(NSError *)error {
+    self.bannerContent.znb_height = 0;
+    self.tableView.tableHeaderView = self.bannerContent;
+}
+
 @end

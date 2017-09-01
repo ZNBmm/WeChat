@@ -28,6 +28,14 @@
 			<key>iconImage</key>
 			<string>二维码</string>
 		</dict>
+		<dict>
+			<key>colorHex</key>
+			<string>ffd247</string>
+			<key>title</key>
+			<string>个人中心</string>
+			<key>iconImage</key>
+			<string>barbuttonicon_InfoSingle</string>
+		</dict>
 	</array>
 </dict>
 </plist>

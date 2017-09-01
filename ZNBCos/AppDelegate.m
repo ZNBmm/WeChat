@@ -75,7 +75,7 @@
     // Optional
     // 获取IDFA
     // 如需使用IDFA功能请添加此代码并在初始化方法的advertisingIdentifier参数中填写对应值
-//    NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     
     // Required
     // init Push
@@ -85,7 +85,7 @@
     [JPUSHService setupWithOption:launchOptions appKey:@"73c35f079e38ad0464936487"
                           channel:@"App Store"
                  apsForProduction:YES
-            advertisingIdentifier:nil];
+            advertisingIdentifier:advertisingId];
     
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
     
@@ -175,8 +175,8 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 
-    NSLog(@"URL--%@",url.absoluteString);
-    NSLog(@"%@",sourceApplication);
+    ZNBLog(@"URL--%@",url.absoluteString);
+    ZNBLog(@"%@",sourceApplication);
     
     return YES;
 }

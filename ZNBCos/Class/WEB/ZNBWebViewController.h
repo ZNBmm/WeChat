@@ -11,4 +11,6 @@
 @interface ZNBWebViewController : UIViewController
 /** URL */
 @property (nonatomic, copy) NSString *url;
+/** source */
+@property (nonatomic, copy) NSString *source;
 @end

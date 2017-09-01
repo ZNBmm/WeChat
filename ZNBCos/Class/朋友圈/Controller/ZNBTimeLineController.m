@@ -15,16 +15,20 @@
 #import "ZNBAddBGViewController.h"
 #import "ZNBTimeLineBGModel.h"
 
+#import "GDTMobInterstitial.h"
+
 static NSString *const reuseCell = @"ZNBTimeLineCell";
-@interface ZNBTimeLineController ()<UITableViewDelegate,UITableViewDataSource,ZNBTimeLineCellDelegate>
+@interface ZNBTimeLineController ()<UITableViewDelegate,UITableViewDataSource,ZNBTimeLineCellDelegate,GDTMobInterstitialDelegate>
 @property (weak, nonatomic) UITableView *tableView;
 @property (weak, nonatomic) ZNBTimeLineTopView *topView;
 @property (strong, nonatomic) NSMutableArray *dataSource;
 @property (weak, nonatomic) ZNBTimeLineCell *currentCell;
 @property (weak, nonatomic) UIButton *currentCmtBtn;
+@property (strong, nonatomic) GDTMobInterstitial *interstitialObj;
 @end
 
 @implementation ZNBTimeLineController
+
 - (NSMutableArray *)dataSource
 {
     if (_dataSource == nil) {
@@ -47,6 +51,14 @@ static NSString *const reuseCell = @"ZNBTimeLineCell";
     }
     return _topView;
 }
+- (GDTMobInterstitial *)interstitialObj
+{
+    if (_interstitialObj == nil) {
+        _interstitialObj = [[GDTMobInterstitial alloc] initWithAppkey:@"1106386544" placementId:@"9050623544014309"];
+        _interstitialObj.delegate = self;
+    }
+    return _interstitialObj;
+}
 #pragma mark - 控制器生命周期方法
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -56,6 +68,8 @@ static NSString *const reuseCell = @"ZNBTimeLineCell";
     [self setUpNav];
     
     [self setUpTableView];
+    
+    [self.interstitialObj loadAd];
 
 }
 - (void)viewWillLayoutSubviews {
@@ -127,6 +141,15 @@ static NSString *const reuseCell = @"ZNBTimeLineCell";
 #pragma mark - 相机点击事件
 - (void)camerDidclick {
     ZNBAddImageTextController *addVc = [[ZNBAddImageTextController alloc] init];
+    
+    addVc.handle = ^{
+        
+        dispatch_after(1, dispatch_get_main_queue(), ^{
+            
+            [self.interstitialObj presentFromRootViewController:self];
+        });
+        
+    };
     [self.navigationController pushViewController:addVc animated:YES];
 }
 #pragma mark - <UITableViewDataSource>
