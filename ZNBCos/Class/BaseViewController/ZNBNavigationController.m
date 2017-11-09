@@ -26,7 +26,7 @@
     
     CGFloat rgb = 0.1;
     bar.barTintColor = [UIColor colorWithRed:rgb green:rgb blue:rgb alpha:0.9];
-    [bar setBackgroundImage:[UIImage imageNamed:@"moments_navigationbar"] forBarMetrics:UIBarMetricsDefault];;
+   // [bar setBackgroundImage:[UIImage imageNamed:@"SenderTextNodeBkg"] forBarMetrics:UIBarMetricsDefault];;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -77,7 +77,7 @@ static NSString *posId = @"8010627544016226";
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:@"会话列表"];
     
-    BOOL isPurchase = [[NSUserDefaults standardUserDefaults] valueForKey:kIsPurchase];
+    BOOL isPurchase = [[NSUserDefaults standardUserDefaults] boolForKey:kIsPurchase];
     if (isPurchase) {
         
         self.bannerView = nil;
@@ -101,6 +101,14 @@ static NSString *posId = @"8010627544016226";
     [self setUpNav];
     
     self.tableView.tableFooterView = self.bannerContent;
+    if (@available(iOS 11.0, *)) {
+        NSLog(@"安全区域%@",NSStringFromUIEdgeInsets(self.view.safeAreaInsets));
+        NSLog(@"adjustedContentInset%@",NSStringFromUIEdgeInsets(self.tableView.adjustedContentInset));
+    } else {
+        // Fallback on earlier versions
+    }
+    
+    NSLog(@"contentInset%@",NSStringFromUIEdgeInsets(self.tableView.contentInset));
     
 }
 #pragma mark - 处理数据

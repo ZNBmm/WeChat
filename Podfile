@@ -3,7 +3,7 @@
 
 target 'ZNBCos' do
     
-    pod 'Realm', '~> 2.2.0'
+    pod 'Realm’, ‘~> 2.10.1’
     pod 'Masonry', '~> 1.0.1'
     pod 'TZImagePickerController', '~> 1.7.8'
     pod 'YYText', '~> 1.0.7'
@@ -11,6 +11,7 @@ target 'ZNBCos' do
     pod 'JPush'
     pod 'SVProgressHUD', '~> 2.1.2'
     pod 'Bugly'
+    pod 'SDCycleScrollView', '~> 1.66'
     #标准sdk 含idfa
     pod 'UMengAnalytics'
 end

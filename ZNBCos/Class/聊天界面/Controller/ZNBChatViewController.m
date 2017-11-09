@@ -30,7 +30,8 @@ static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
 @end
 
 @implementation ZNBChatViewController{
-   BOOL _isClose;
+    BOOL _isClose;
+    BOOL _isPurchase;
 }
 
 #pragma mark ==== 懒加载 ===
@@ -121,6 +122,8 @@ static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
     if (self.dataArr.count == 0) {
         [self showTips];
     }
+    
+    _isPurchase = [[NSUserDefaults standardUserDefaults] boolForKey:kIsPurchase];
 
 }
 
@@ -209,8 +212,8 @@ static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 
-     BOOL isPurchase = [[NSUserDefaults standardUserDefaults] valueForKey:kIsPurchase];
-    if (isPurchase || _isClose) {
+    
+    if (_isPurchase || _isClose) {
         return [UIView new];
     }else {
     
@@ -220,8 +223,7 @@ static NSString *const reuseRedPageCell = @"ZNBRedPageMessageCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
 
-    BOOL isPurchase = [[NSUserDefaults standardUserDefaults] valueForKey:kIsPurchase];
-    if (isPurchase || _isClose) {
+    if (_isPurchase || _isClose) {
         return 0.001;
     }else {
         

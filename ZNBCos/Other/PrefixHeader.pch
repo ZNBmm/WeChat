@@ -26,7 +26,6 @@
 #define kCmtBGColor ZNBColor(210,210,210)
 #define kBackGroundColor ZNBColor(240,240,240)
 
-#define ZNBLog(...) NSLog(@"%s %d \n%@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
 
 #import "UIColor+Hex.h"
 #import "UIImageView+Color.h"
@@ -46,5 +45,17 @@
 #import "UMMobClick/MobClick.h"
 
 static NSString *const kIsPurchase = @"kIsPurchase";
+
+//自定义log
+#ifdef DEBUG1//调试阶段
+
+#define ZNBLog(...) NSLog(@"%s %d \n%@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#else
+
+#define ZNBLog(...)
+
+#endif
+
+
 
 #endif /* PrefixHeader_pch */

@@ -1,0 +1,51 @@
+PODS:
+  - Bugly (2.4.8)
+  - JCore (1.1.0)
+  - JPush (3.0.1):
+    - JCore (~> 1.1.0)
+  - Masonry (1.0.2)
+  - Realm (2.10.2):
+    - Realm/Headers (= 2.10.2)
+  - Realm/Headers (2.10.2)
+  - SDCycleScrollView (1.66):
+    - SDWebImage (~> 4.0.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - SVProgressHUD (2.1.2)
+  - TZImagePickerController (1.7.8)
+  - UMengAnalytics (4.2.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - Bugly
+  - JPush
+  - Masonry (~> 1.0.1)
+  - Realm (~> 2.10.1)
+  - SDCycleScrollView (~> 1.66)
+  - SVProgressHUD (~> 2.1.2)
+  - TZImagePickerController (~> 1.7.8)
+  - UMengAnalytics
+  - YYImage (~> 1.0.4)
+  - YYText (~> 1.0.7)
+
+SPEC CHECKSUMS:
+  Bugly: da3c02408c14838d498429320545a8e439392978
+  JCore: 7382f2c62e6fcf08305b735e91f0fb771f448d3d
+  JPush: 427daa60236d0faa9f379cd5bbeb923103162058
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
+  SDCycleScrollView: e3ade90e9b3159bec04330b208fbfd81c3f3b671
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  TZImagePickerController: 87a138ae5d585225aaa6c8abe2cface0f0ad19dd
+  UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: bdfc2d88c29e78a969dc8b2b386fc951a909850c
+
+COCOAPODS: 1.2.1.beta.1

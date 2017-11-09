@@ -49,6 +49,12 @@
     [self tableView];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [SVProgressHUD dismiss];
+    
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
@@ -103,7 +109,7 @@
             ZNBLog(@"type=--->%d",type);
             [SVProgressHUD dismiss];
             if (type == 0) {
-                [[NSUserDefaults standardUserDefaults] setValue:@(YES) forKey:kIsPurchase];
+                [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kIsPurchase];
                 [[NSUserDefaults standardUserDefaults] synchronize];
             }
         }];

@@ -1353,6 +1353,7 @@
 				CODE_SIGN_ENTITLEMENTS = ZNBCos/ZNBCos.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = B3R5RSW6TE;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = ZNBCos/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = ZNBCos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1377,6 +1378,7 @@
 				CODE_SIGN_ENTITLEMENTS = ZNBCos/ZNBCos.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = B3R5RSW6TE;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = ZNBCos/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = ZNBCos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -28,6 +28,9 @@ static NSString *const reuseCell = @"ZNBTimeLineCell";
 @end
 
 @implementation ZNBTimeLineController
+{
+    BOOL _isPurchase;
+}
 
 - (NSMutableArray *)dataSource
 {
@@ -70,6 +73,7 @@ static NSString *const reuseCell = @"ZNBTimeLineCell";
     [self setUpTableView];
     
     [self.interstitialObj loadAd];
+    
 
 }
 - (void)viewWillLayoutSubviews {
@@ -82,6 +86,8 @@ static NSString *const reuseCell = @"ZNBTimeLineCell";
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:@"朋友圈主界面"];
     [self detalData];
+    
+     _isPurchase = [[NSUserDefaults standardUserDefaults] boolForKey:kIsPurchase];
     
 }
 
@@ -144,9 +150,12 @@ static NSString *const reuseCell = @"ZNBTimeLineCell";
     
     addVc.handle = ^{
         
-        dispatch_after(1, dispatch_get_main_queue(), ^{
+        dispatch_after(0.8, dispatch_get_main_queue(), ^{
             
-            [self.interstitialObj presentFromRootViewController:self];
+            if (!_isPurchase) {
+                
+                [self.interstitialObj presentFromRootViewController:self];
+            }
         });
         
     };

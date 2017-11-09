@@ -17,24 +17,38 @@
 
 #import "ZNBMineViewController.h"
 #import "GDTMobBannerView.h"
+#import "GDTNativeExpressAd.h"
+#import "GDTNativeExpressAdView.h"
+#import <SDCycleScrollView.h>
 
 #define kTopViewHeight kScale*250
 
 // 1106386544
 // 9060728554207423
-static NSString *appkey = @"1106386544";
-static NSString *posId = @"9060728554207423";
+static NSString *const appkey = @"1106386544";
+static NSString *const posId = @"9060728554207423";
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,GDTMobBannerViewDelegate>
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,GDTMobBannerViewDelegate,GDTNativeExpressAdDelegete,UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataArr;
 @property (weak, nonatomic) ZNBHomeTopView *topView;
 @property (strong, nonatomic) GDTMobBannerView *bannerView;
 @property (strong, nonatomic) UIView *bannerContent;
+// 用于请求原生模板广告，注意：不要在广告打开期间释放！
+@property (nonatomic, retain)   GDTNativeExpressAd *nativeExpressAd;
+// 存储返回的GDTNativeExpressAdView
+@property (nonatomic, retain)       NSArray *expressAdViews;
+
+@property (strong, nonatomic) UIView *bottomContent;
+@property (weak, nonatomic) UICollectionView *collecView;
+
 
 @end
 
 @implementation ViewController
+{
+    BOOL _isPurchase;
+}
 - (ZNBHomeTopView *)topView
 {
     if (_topView == nil) {
@@ -44,6 +58,28 @@ static NSString *posId = @"9060728554207423";
         [self.view addSubview:topView];
     }
     return _topView;
+}
+- (UIView *)bottomContent
+{
+    if (_bottomContent == nil) {
+        UICollectionViewFlowLayout *fl = [[UICollectionViewFlowLayout alloc] init];
+        fl.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        fl.itemSize = CGSizeMake(kScreenW-20, 95*kScale);
+
+        UICollectionView *collect = [[UICollectionView alloc] initWithFrame:CGRectMake(10, 10, kScreenW-10, 95*kScale) collectionViewLayout:fl];
+        _collecView = collect;
+        collect.delegate = self;
+        collect.dataSource = self;
+        collect.pagingEnabled = YES;
+        collect.showsHorizontalScrollIndicator = NO;
+        collect.backgroundColor = [UIColor whiteColor];
+        [collect registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+        collect.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
+        _bottomContent = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 95*kScale+10)];
+        [_bottomContent addSubview:collect];
+        
+    }
+    return _bottomContent;
 }
 - (UIView *)bannerContent
 {
@@ -82,7 +118,7 @@ static NSString *posId = @"9060728554207423";
         _tableView = tableView;
         tableView.delegate = self;
         tableView.dataSource = self;
-        tableView.contentInset = UIEdgeInsetsMake(kTopViewHeight, 0, 30, 0);
+        tableView.contentInset = UIEdgeInsetsMake(kTopViewHeight-44, 0, 30, 0);
         tableView.backgroundColor = [UIColor clearColor];
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZNBHomeCell class]) bundle:nil] forCellReuseIdentifier:@"cell"];
@@ -104,6 +140,19 @@ static NSString *posId = @"9060728554207423";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIScrollView *s;
+    
+    if (@available(iOS 11.0, *)) {
+        NSLog(@"安全区域%@",NSStringFromUIEdgeInsets(self.tableView.superview.safeAreaInsets));
+        NSLog(@"adjustedContentInset%@",NSStringFromUIEdgeInsets(self.tableView.adjustedContentInset));
+    } else {
+        // Fallback on earlier versions
+    }
+    
+    NSLog(@"contentInset%@",NSStringFromUIEdgeInsets(self.tableView.contentInset));
+    
+    
+    
     [self topView];
     self.view.backgroundColor = [UIColor whiteColor];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HomeData" ofType:@"plist"]];
@@ -117,7 +166,17 @@ static NSString *posId = @"9060728554207423";
     }
     [self.tableView reloadData];
     
-
+    [self loadAD];
+    
+    
+}
+// 拉取广告
+- (void)loadAD {
+    self.nativeExpressAd = [[GDTNativeExpressAd alloc] initWithAppkey:@"1106386544" placementId:@"3060924577620401" adSize:CGSizeMake(kScreenW-20, 95*kScale)];
+    self.nativeExpressAd.delegate = self;
+    
+    // 拉取5条广告
+    [self.nativeExpressAd loadAd:5];
 }
 - (void)sessionMake {
     self.title = @"返回";
@@ -146,8 +205,8 @@ static NSString *posId = @"9060728554207423";
     [super viewWillAppear:animated];
     self.title  = @"发现";
     
-    BOOL isPurchase = [[NSUserDefaults standardUserDefaults] valueForKey:kIsPurchase];
-    if (isPurchase) {
+    _isPurchase = [[NSUserDefaults standardUserDefaults] boolForKey:kIsPurchase];
+    if (_isPurchase) {
         
         self.bannerView = nil;
         self.bannerContent = nil;
@@ -253,6 +312,77 @@ static NSString *posId = @"9060728554207423";
 - (void)bannerViewFailToReceived:(NSError *)error {
     self.bannerContent.znb_height = 0;
     self.tableView.tableHeaderView = self.bannerContent;
+    ZNBLog(@"%@",error);
+}
+
+/**
+ * 拉取广告成功的回调
+ */
+- (void)nativeExpressAdSuccessToLoad:(GDTNativeExpressAd *)nativeExpressAd views:(NSArray<__kindof GDTNativeExpressAdView *> *)views
+{
+    [self.expressAdViews enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        GDTNativeExpressAdView *adView = (GDTNativeExpressAdView *)obj;
+        [adView removeFromSuperview];
+    }];
+    
+    self.expressAdViews = [NSArray arrayWithArray:views];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-variable"
+    UIViewController *rootViewController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
+    //vc = [self navigationController];
+#pragma clang diagnostic pop
+    
+    if (self.expressAdViews.count) {
+        
+        self.tableView.tableFooterView = self.bottomContent;
+        [self.collecView reloadData];
+    }
+    
+}
+
+/**
+ * 拉取广告失败的回调
+ */
+- (void)nativeExpressAdFailToLoad:(GDTNativeExpressAd *)nativeExpressAd error:(NSError *)error {
+    
+}
+/**
+ * 拉取广告失败的回调
+ */
+- (void)nativeExpressAdRenderFail:(GDTNativeExpressAdView *)nativeExpressAdView
+{
+    ZNBLog(@"%s",__FUNCTION__);
+}
+
+- (void)nativeExpressAdViewRenderSuccess:(GDTNativeExpressAdView *)nativeExpressAdView
+{
+    ZNBLog(@"%s",__FUNCTION__);
+}
+
+- (void)nativeExpressAdViewClicked:(GDTNativeExpressAdView *)nativeExpressAdView
+{
+    ZNBLog(@"%s",__FUNCTION__);
+}
+#pragma mark - collectionView 代理方法
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+
+    return self.expressAdViews.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    GDTNativeExpressAdView *expressView =  [self.expressAdViews objectAtIndex:indexPath.row];
+    // 设置frame，开发者自己设置
+    expressView.frame = CGRectMake(0, 0, kScreenW-20, 95*kScale);
+    expressView.controller = self;
+    
+    [expressView render];
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    [cell.contentView respondsToSelector:@selector(removeAllSubviews)];
+    [cell.contentView addSubview:expressView];
+    cell.contentView.backgroundColor = [UIColor redColor];
+    return cell;
 }
 
 @end
